@@ -1,5 +1,6 @@
 import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { Globe, Factory, Handshake, Package } from "lucide-react";
 
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -18,10 +19,10 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 }
 
 const stats = [
-  { icon: "🌾", value: 10, suffix: "+", label: "Countries Exported" },
-  { icon: "🏭", value: 20, suffix: "+", label: "Ethanol Plant Clients" },
-  { icon: "🐓", value: 5, suffix: "+", label: "Feed Plant Partners" },
-  { icon: "📦", value: 4, suffix: "", label: "Core Commodities" },
+  { icon: Globe, value: 10, suffix: "+", label: "Countries Exported" },
+  { icon: Factory, value: 20, suffix: "+", label: "Ethanol Plant Clients" },
+  { icon: Handshake, value: 5, suffix: "+", label: "Feed Plant Partners" },
+  { icon: Package, value: 4, suffix: "", label: "Core Commodities" },
 ];
 
 export default function StatsStrip() {
@@ -37,7 +38,9 @@ export default function StatsStrip() {
             transition={{ duration: 0.5, delay: i * 0.1 }}
             className="text-center"
           >
-            <div className="mb-2 text-3xl">{s.icon}</div>
+            <div className="mb-3 flex justify-center text-amber-primary">
+              <s.icon size={36} strokeWidth={1.5} />
+            </div>
             <div className="font-heading text-4xl font-bold text-amber-primary md:text-5xl">
               <Counter to={s.value} suffix={s.suffix} />
             </div>
