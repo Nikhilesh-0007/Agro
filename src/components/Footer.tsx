@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, User, ArrowUp } from "lucide-react";
-import logoImg from "@/assets/logo.jpeg";
+import { Link } from "react-router-dom";
+import logoBgImg from "@/assets/logo_background.png";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -8,13 +9,28 @@ export default function Footer() {
   };
 
   const quickLinks = [
-    { label: "Home", href: "#home" },
-    { label: "About Us", href: "#about" },
-    { label: "Commodities", href: "#commodities" },
-    { label: "Segments", href: "#segments" },
-    { label: "Clients", href: "#clients" },
-    { label: "Export Countries", href: "#countries" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", to: "/" },
+    { label: "About Us", to: "/about" },
+    { label: "Industries", to: "/segments" },
+    { label: "Our Clients", to: "/clients" },
+    { label: "Global Network", to: "/export-countries" },
+    { label: "Contact Us", to: "/contact" },
+  ];
+
+  const commodities = [
+    { label: "Parboiled Rice", to: "/commodities/rice" },
+    { label: "Yellow Maize", to: "/commodities/maize" },
+    { label: "Broken Rice", to: "/commodities/broken-rice" },
+    { label: "Pearl Millets", to: "/commodities/millet" },
+    { label: "Feed Grains", to: "/commodities/feed-products" },
+    { label: "Ethanol Raw Grains", to: "/commodities/ethanol-materials" },
+  ];
+
+  const network = [
+    { label: "United Arab Emirates", to: "/export-countries/uae" },
+    { label: "Vietnam Network", to: "/export-countries/vietnam" },
+    { label: "African Continent", to: "/export-countries/africa" },
+    { label: "Full Shipping Ports", to: "/export-countries" },
   ];
 
   return (
@@ -24,19 +40,19 @@ export default function Footer() {
       <div className="absolute top-0 right-1/4 w-[400px] h-[150px] bg-gradient-to-b from-amber-primary/5 via-transparent to-transparent blur-3xl pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-24 relative z-10">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 pb-16 border-b border-white/10">
+        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 pb-16 border-b border-white/10">
           
-          {/* Logo & About Column */}
+          {/* Col 1: Logo & About Bio */}
           <div className="lg:col-span-1.5 flex flex-col gap-5">
-            <a href="#home" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <img
-                src={logoImg}
+                src={logoBgImg}
                 alt="AS Agro Exports"
-                className="h-16 md:h-20 w-auto object-contain"
+                className="h-14 md:h-16 w-auto object-contain"
               />
-            </a>
+            </Link>
             <p className="text-sm leading-relaxed text-white/70 mt-2">
-              A premier trading and export company bridging India's rich agricultural heartland in Andhra Pradesh to global markets across Africa, UAE, Vietnam, and the UK. Committed to uncompromising quality in Rice, Maize, and allied agro commodities.
+              A premier trading and export company bridging India's rich agricultural heartland in Andhra Pradesh to global markets. Committed to uncompromising quality in Rice, Maize, and allied agro commodities.
             </p>
             <div className="flex items-center gap-2 text-amber-primary text-xs font-semibold tracking-wider uppercase mt-1">
               <span className="h-1.5 w-1.5 rounded-full bg-amber-primary animate-pulse" />
@@ -44,86 +60,99 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links Column */}
+          {/* Col 2: Quick Links */}
           <div className="flex flex-col gap-4">
             <h4 className="font-heading text-lg font-bold text-amber-primary tracking-wide relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-amber-primary">
               Quick Links
             </h4>
             <ul className="flex flex-col gap-2.5 mt-2">
               {quickLinks.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
                     className="text-sm text-white/70 hover:text-amber-primary transition-colors duration-200 flex items-center gap-1.5 group"
                   >
                     <span className="h-1 w-1 rounded-full bg-white/20 group-hover:bg-amber-primary transition-colors" />
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Registered Office Column */}
+          {/* Col 3: Commodities Links */}
           <div className="flex flex-col gap-4">
             <h4 className="font-heading text-lg font-bold text-amber-primary tracking-wide relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-amber-primary">
-              Registered Office
+              Commodities
             </h4>
-            <div className="flex flex-col gap-3.5 mt-2 text-sm text-white/70">
-              <div className="flex gap-3">
-                <MapPin size={18} className="text-amber-primary shrink-0 mt-0.5" />
-                <p className="leading-relaxed">
-                  <span className="font-semibold text-white block text-xs uppercase tracking-wider mb-1">Registered Address:</span>
-                  D.No: 3-105 Indira Nagar,
-                  <br />
-                  Opp: GBR College, Anaparthi,
-                  <br />
-                  East Godavari District, A.P - 533342
-                </p>
-              </div>
-              <div className="flex items-center gap-3 border-t border-white/5 pt-3">
-                <Clock size={16} className="text-amber-primary shrink-0" />
-                <span>Hours: 9 AM - 6 PM (All 7 Days)</span>
-              </div>
-            </div>
+            <ul className="flex flex-col gap-2.5 mt-2">
+              {commodities.map((item) => (
+                <li key={item.to}>
+                  <Link
+                    to={item.to}
+                    className="text-sm text-white/70 hover:text-amber-primary transition-colors duration-200 flex items-center gap-1.5 group"
+                  >
+                    <span className="h-1 w-1 rounded-full bg-white/20 group-hover:bg-amber-primary transition-colors" />
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          {/* Corporate Office & Contact Column */}
+          {/* Col 4: Network Links */}
           <div className="flex flex-col gap-4">
             <h4 className="font-heading text-lg font-bold text-amber-primary tracking-wide relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-amber-primary">
-              Corporate Office
+              Global Ports
+            </h4>
+            <ul className="flex flex-col gap-2.5 mt-2">
+              {network.map((item) => (
+                <li key={item.to}>
+                  <Link
+                    to={item.to}
+                    className="text-sm text-white/70 hover:text-amber-primary transition-colors duration-200 flex items-center gap-1.5 group"
+                  >
+                    <span className="h-1 w-1 rounded-full bg-white/20 group-hover:bg-amber-primary transition-colors" />
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 5: Branch Office Details & Contact Person */}
+          <div className="lg:col-span-1 flex flex-col gap-4">
+            <h4 className="font-heading text-lg font-bold text-amber-primary tracking-wide relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-amber-primary">
+              Contact Desk
             </h4>
             <div className="flex flex-col gap-3.5 mt-2 text-sm text-white/70">
-              <div className="flex gap-3">
-                <MapPin size={18} className="text-amber-primary shrink-0 mt-0.5" />
-                <p className="leading-relaxed">
-                  <span className="font-semibold text-white block text-xs uppercase tracking-wider mb-1">Office Address:</span>
-                  #16-23-36/2, 3rd Floor,
-                  <br />
-                  KVS Towers, Rajeevi Street,
-                  <br />
-                  Near Dairy Farm Centre,
-                  <br />
-                  Kakinada, A.P - 533003
+              <div className="flex gap-2">
+                <MapPin size={16} className="text-amber-primary shrink-0 mt-0.5" />
+                <p className="text-xs leading-relaxed">
+                  <span className="font-semibold text-white block">Corporate Office:</span>
+                  KVS Towers, Rajeevi Street, Dairy Farm Centre, Kakinada, AP - 533003
                 </p>
               </div>
-              
-              <div className="flex flex-col gap-2.5 border-t border-white/5 pt-3">
-                <div className="flex items-center gap-3">
-                  <User size={16} className="text-amber-primary shrink-0" />
-                  <span>Mr. Seshu Pampana (Contact Person)</span>
+              <div className="flex flex-col gap-2 border-t border-white/5 pt-3">
+                <div className="flex items-center gap-2">
+                  <User size={14} className="text-amber-primary shrink-0" />
+                  <span className="text-xs font-semibold text-white">Mr. Seshu Pampana</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Phone size={16} className="text-amber-primary shrink-0" />
-                  <a href="tel:+919666777667" className="hover:text-amber-primary transition-colors">
+                <div className="flex items-center gap-2">
+                  <Phone size={14} className="text-amber-primary shrink-0" />
+                  <a href="tel:+919666777667" className="text-xs hover:text-amber-primary transition-colors">
                     +91 966 677 7667
                   </a>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Mail size={16} className="text-amber-primary shrink-0" />
-                  <a href="mailto:asagroexportsltd@gmail.com" className="hover:text-amber-primary transition-colors break-all">
+                <div className="flex items-center gap-2">
+                  <Mail size={14} className="text-amber-primary shrink-0" />
+                  <a href="mailto:asagroexportsltd@gmail.com" className="text-xs hover:text-amber-primary transition-colors break-all">
                     asagroexportsltd@gmail.com
                   </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock size={14} className="text-amber-primary shrink-0" />
+                  <span className="text-xs">9 AM - 6 PM (7 Days)</span>
                 </div>
               </div>
             </div>
@@ -135,8 +164,8 @@ export default function Footer() {
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
           <p>© {new Date().getFullYear()} AS Agro Exports. All Rights Reserved. Built for global agricultural trade excellence.</p>
           <div className="flex items-center gap-4">
-            <a href="#about" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#contact" className="hover:text-white transition-colors">Terms of Service</a>
+            <Link to="/about" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/contact" className="hover:text-white transition-colors">Terms of Service</Link>
             <motion.button
               whileHover={{ scale: 1.1, backgroundColor: "#F5A800", color: "#1A6B2F" }}
               whileTap={{ scale: 0.9 }}

@@ -5,20 +5,25 @@ export default {
     extend: {
       colors: {
         green: {
-          primary: "#1A6B2F",
-          mid: "#2E8B47",
-          tint: "#EAF6EC",
+          primary: "#1B4928", // Deeper, warmer village forest green
+          mid: "#2A6E3B",
+          tint: "#EFF5EF", // Sage/Leaf warm tint
         },
         amber: {
-          primary: "#F5A800",
-          deep: "#E07B00",
-          tint: "#FFF5DD",
+          primary: "#D48A1D", // Golden-hour harvest honey
+          deep: "#B26910", // Warm clay/terracotta soil
+          tint: "#FBF3E3", // Wheat straw/golden grain warm tint
         },
         neutral: {
-          charcoal: "#1C1C1C",
-          stone: "#5A5A5A",
-          offwhite: "#F7F7F5",
+          charcoal: "#1C1917", // Warm stone charcoal
+          stone: "#6B6661", // Warm granite dust
+          offwhite: "#FAF5EC", // Warm organic linen/sand backdrop
         },
+        earthy: {
+          clay: "#A05A2C", // Warm terracotta clay
+          ochre: "#D4A373", // Village ochre yellow
+          straw: "#E7C169", // Fresh straw
+        }
       },
       fontFamily: {
         heading: ["Playfair Display", "serif"],

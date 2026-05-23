@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import heroImg from "@/assets/hero-field.jpg";
 
 const container = {
@@ -12,6 +13,8 @@ const item = {
 };
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden">
       <img
@@ -57,18 +60,22 @@ export default function Hero() {
           variants={item}
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
-          <a
-            href="#commodities"
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            onClick={() => navigate("/commodities")}
             className="rounded-full bg-amber-primary px-8 py-3 text-sm font-semibold text-green-primary shadow-lg shadow-amber-primary/30 hover:bg-amber-deep hover:text-white transition-colors"
           >
             Explore Commodities
-          </a>
-          <a
-            href="#contact"
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            onClick={() => navigate("/contact")}
             className="rounded-full border border-white/70 px-8 py-3 text-sm font-semibold text-white hover:bg-white hover:text-green-primary transition-colors"
           >
             Partner With Us
-          </a>
+          </motion.button>
         </motion.div>
       </motion.div>
 

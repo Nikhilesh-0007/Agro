@@ -5,7 +5,7 @@
 html, body {
   scroll-behavior: smooth;
   font-family: 'Inter', sans-serif;
-  background-color: #F7F7F5;
+  background-color: #FAF5EC; /* Warm organic linen/sand backdrop */
 }
 
 h1, h2, h3, h4, h5, h6, .font-heading {
@@ -14,16 +14,16 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #F7F7F5; }
-::-webkit-scrollbar-thumb { background: #1A6B2F; border-radius: 5px; }
-::-webkit-scrollbar-thumb:hover { background: #2E8B47; }
+::-webkit-scrollbar-track { background: #FAF5EC; }
+::-webkit-scrollbar-thumb { background: #1B4928; border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: #2A6E3B; }
 
 .bg-grain-texture {
-  background-image: radial-gradient(rgba(26, 107, 47, 0.15) 1px, transparent 0);
+  background-image: radial-gradient(rgba(27, 73, 40, 0.12) 1px, transparent 0);
   background-size: 24px 24px;
 }
 
 .bg-dot-pattern {
-  background-image: radial-gradient(rgba(245, 168, 0, 0.15) 1.5px, transparent 0);
+  background-image: radial-gradient(rgba(212, 138, 29, 0.12) 1.5px, transparent 0);
   background-size: 20px 20px;
 }
