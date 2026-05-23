@@ -118,7 +118,7 @@ export default function Home() {
                 </div>
                 <h3 className="font-heading text-lg font-bold text-neutral-charcoal">{c.name}</h3>
                 <p className="mt-2 flex-1 text-xs leading-relaxed text-neutral-stone">{c.desc}</p>
-                
+
                 <div className="mt-5 flex items-center justify-between">
                   <span className="rounded-full bg-amber-tint px-3 py-1 text-[10px] font-bold text-amber-deep uppercase">
                     {c.tag}
@@ -148,7 +148,7 @@ export default function Home() {
       {/* 3. Served Industries Preview */}
       <section className="bg-neutral-offwhite py-20 px-6 md:px-12 lg:px-24">
         <div className="mx-auto max-w-7xl grid items-center gap-12 lg:grid-cols-5">
-          
+
           <div className="lg:col-span-2 flex flex-col gap-4">
             <span className="inline-block self-start rounded-full bg-green-primary/5 border border-green-tint px-3 py-1 text-[10px] font-bold text-green-primary uppercase tracking-wide">
               Market Verticals
@@ -193,7 +193,7 @@ export default function Home() {
       <section className="bg-green-primary py-20 px-6 md:px-12 lg:px-24 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-dot-pattern opacity-10" />
         <div className="mx-auto max-w-7xl relative z-10 grid items-center gap-12 lg:grid-cols-2">
-          
+
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -209,7 +209,7 @@ export default function Home() {
             <p className="mt-5 text-sm leading-relaxed text-white/80">
               Our export freight division handles direct charters and 20ft containerized logistics. Routing from Kakinada and Visakhapatnam deep berths, we deliver regular grain shipments directly to main global ports like Cotonou, Lome, Abidjan, Haiphong, and Jebel Ali.
             </p>
-            
+
             <div className="mt-6 flex flex-col gap-3">
               <div className="flex items-center gap-3">
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-amber-primary/20 text-amber-primary">

@@ -101,7 +101,7 @@ export default function CommoditiesPage() {
 
       <section className="bg-neutral-offwhite py-16 px-6 md:px-12 lg:px-24">
         <div className="mx-auto max-w-7xl">
-          
+
           {/* Header Description */}
           <div className="mx-auto max-w-2xl text-center mb-12">
             <span className="mb-3 inline-block rounded-full bg-amber-primary/20 px-3 py-1 text-xs font-semibold tracking-wider text-amber-deep uppercase">
@@ -124,11 +124,10 @@ export default function CommoditiesPage() {
               <button
                 key={tab.id}
                 onClick={() => setFilter(tab.id as any)}
-                className={`rounded-full px-5 py-2.5 text-xs font-bold transition-all ${
-                  filter === tab.id
+                className={`rounded-full px-5 py-2.5 text-xs font-bold transition-all ${filter === tab.id
                     ? "bg-green-primary text-white shadow-md"
                     : "bg-white text-green-primary border border-green-tint hover:bg-green-primary/5"
-                }`}
+                  }`}
               >
                 {tab.label}
               </button>
@@ -172,7 +171,7 @@ export default function CommoditiesPage() {
                     </div>
 
                     <p className="text-xs leading-relaxed text-neutral-stone mb-5">{c.desc}</p>
-                    
+
                     {/* High level specification log */}
                     <div className="rounded-xl bg-neutral-offwhite p-3 border border-green-tint/30 flex justify-between text-[11px] font-semibold text-neutral-charcoal mb-5">
                       <div>

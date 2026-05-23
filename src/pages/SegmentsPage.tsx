@@ -1,31 +1,31 @@
 import PageBanner from "../components/PageBanner";
 import SegmentsSection from "../components/SegmentsSection";
 import { motion } from "framer-motion";
-import { Landmark, Compass, Target, ShieldCheck, Ship, MessageSquare } from "lucide-react";
+import { Flame, Wheat, Egg, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function SegmentsPage() {
   const industries = [
     {
-      icon: <Landmark size={24} />,
+      icon: <Flame size={24} />,
       title: "Ethanol & Bio-Fuel Plants",
       desc: "Delivering high-starch broken grains and feedstocks to advanced distillation units. We operate custom dump loaders and bulk scheduling, maintaining consistent calorie inputs for year-round alcohol fermentation.",
       metric: "Starch Content: 72% Min"
     },
     {
-      icon: <Target size={24} />,
+      icon: <Wheat size={24} />,
       title: "Feed Mills & Co-operatives",
       desc: "Supporting the livestock and cattle industries with premium yellow maize and rich energy inputs. Sourced directly from farms and tested for aflatoxin levels, securing micro-biological feed standards.",
       metric: "Moisture Content: 13.5% Max"
     },
     {
-      icon: <Compass size={24} />,
+      icon: <Egg size={24} />,
       title: "Poultry Integrations & Hatcheries",
       desc: "Direct bulk contracts with commercial hatcheries, commercial layer farms, and breeder cooperatives. Offering premium quality IR64 sifting brokens and high-energy maize kernels for hatcheries feed blends.",
       metric: "Aflatoxin: Under 20 ppb"
     },
     {
-      icon: <Ship size={24} />,
+      icon: <Globe size={24} />,
       title: "Export Houses & Global Trade",
       desc: "We coordinate break-bulk marine cargo loaders and 20ft shipping container services. Routing directly from deep-water ports to main global trading hubs across three continents.",
       metric: "Transit Speeds: Port-to-Port"

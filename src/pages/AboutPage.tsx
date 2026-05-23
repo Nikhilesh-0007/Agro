@@ -68,7 +68,7 @@ export default function AboutPage() {
       <section className="bg-amber-tint py-20 px-6 md:px-12 lg:px-24 border-y border-amber-primary/10">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
-            
+
             <div>
               <span className="mb-3 inline-block rounded-full bg-amber-primary/20 px-3 py-1 text-xs font-semibold tracking-wider text-amber-deep uppercase">
                 Infrastructure Desk
@@ -77,7 +77,7 @@ export default function AboutPage() {
               <p className="mt-5 text-sm leading-relaxed text-neutral-stone">
                 Our logistics network relies on state-of-the-art warehouses and packaging facilities situated close to key farming fields and primary sea terminals.
               </p>
-              
+
               <div className="mt-8 flex flex-col gap-4">
                 <div className="flex gap-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-green-primary border border-green-tint">
@@ -155,7 +155,7 @@ export default function AboutPage() {
             Corporate Leadership
           </span>
           <h2 className="font-heading text-3xl font-bold text-green-primary md:text-4xl">Managing Director's Desk</h2>
-          
+
           <div className="mt-8 rounded-3xl border border-green-tint bg-white p-8 md:p-12 shadow-md relative">
             <div className="absolute -top-4 left-12 rounded-lg bg-amber-primary px-3 py-1 text-xs font-bold text-green-primary uppercase">
               Managing Director

@@ -1,38 +1,39 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Flame, FlaskConical, Wheat, Egg, Globe } from "lucide-react";
 
 const segments = [
   {
     id: "ethanol",
-    icon: "🏭",
+    icon: <Flame size={22} className="text-amber-deep" />,
     name: "Ethanol Plants",
     accent: "amber",
     desc: "We are a trusted grain supplier to leading ethanol producers across Andhra Pradesh and Odisha, delivering broken rice and maize at scale with consistent quality and timely logistics.",
   },
   {
     id: "ddgs",
-    icon: "⚗️",
+    icon: <FlaskConical size={22} className="text-green-primary" />,
     name: "DDGS",
     accent: "green",
     desc: "Distillers Dried Grains with Solubles — a high-protein co-product of ethanol production that we channel into the feed industry as a cost-effective nutritional ingredient.",
   },
   {
     id: "feed",
-    icon: "🐾",
+    icon: <Wheat size={22} className="text-amber-deep" />,
     name: "Feed Plants",
     accent: "amber",
     desc: "Long-standing partnerships with India's top feed manufacturers — supplying maize and brokens that fuel cattle, aqua and poultry nutrition programmes nationwide.",
   },
   {
     id: "poultry",
-    icon: "🐓",
+    icon: <Egg size={22} className="text-green-primary" />,
     name: "Poultry",
     accent: "green",
     desc: "Direct supply to integrated poultry players, ensuring steady availability of grade-A maize and brokens for hatcheries, breeders and commercial layer farms.",
   },
   {
     id: "exports",
-    icon: "🚢",
+    icon: <Globe size={22} className="text-amber-deep" />,
     name: "Exports",
     accent: "amber",
     desc: "We export Parboiled IR64, White Rice, Brokens, and Maize to countries across Africa, the Middle East, Vietnam, and the UK. Our logistics-ready operations ensure timely delivery to major ports including Cotonou, Lome, Abidjan, and others.",

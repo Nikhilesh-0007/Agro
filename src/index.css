@@ -2,21 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
   font-family: 'Inter', sans-serif;
-  background-color: #FAF5EC; /* Warm organic linen/sand backdrop */
+  background-color: #FAF5EC;
+  /* Warm organic linen/sand backdrop */
 }
 
-h1, h2, h3, h4, h5, h6, .font-heading {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-heading {
   font-family: 'Playfair Display', serif;
 }
 
 /* Custom Scrollbar */
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #FAF5EC; }
-::-webkit-scrollbar-thumb { background: #1B4928; border-radius: 5px; }
-::-webkit-scrollbar-thumb:hover { background: #2A6E3B; }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF5EC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B4928;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2A6E3B;
+}
 
 .bg-grain-texture {
   background-image: radial-gradient(rgba(27, 73, 40, 0.12) 1px, transparent 0);
