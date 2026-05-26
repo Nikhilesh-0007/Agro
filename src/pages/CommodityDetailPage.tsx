@@ -110,6 +110,10 @@ const commodityData: Record<string, {
     ],
     packaging: ["Bulk dumpers", "50 kg unbranded PP sacks"],
     destinations: ["Andhra Pradesh Distilleries", "Odisha Bio-fuel Plants", "Regional Refineries"],
+    related: [
+      { name: "Yellow Maize", id: "maize", image: maizeImg },
+      { name: "DDGS Feed", id: "ddgs", image: ddgsImg }
+    ]
   },
   ddgs: {
     name: "DDGS (Distillers Grains)",
