@@ -1,6 +1,6 @@
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, User } from "lucide-react";
-import { useState } from "react";
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
@@ -124,7 +124,7 @@ I have submitted an enquiry on your website. Here are my details:
 Looking forward to connecting!`;
 
             const encodedText = encodeURIComponent(whatsappText);
-            window.location.href = `https://wa.me/919014868451?text=${encodedText}`;
+            window.location.href = `https://wa.me/919666777667?text=${encodedText}`;
             setSubmitted(true);
           }}
           className="bg-white p-10 md:p-14"
