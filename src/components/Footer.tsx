@@ -138,11 +138,16 @@ export default function Footer() {
                   <User size={14} className="text-amber-primary shrink-0" />
                   <span className="text-xs font-semibold text-neutral-charcoal">Mr. Seshu Pampana</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Phone size={14} className="text-amber-primary shrink-0" />
-                  <a href="tel:+919666777667" className="text-xs hover:text-green-primary transition-colors">
-                    +91 9 666 777 667
-                  </a>
+                <div className="flex items-start gap-2">
+                  <Phone size={14} className="text-amber-primary shrink-0 mt-0.5" />
+                  <div className="flex flex-col gap-1">
+                    <a href="tel:+919666777667" className="text-xs hover:text-green-primary transition-colors">
+                      +91 9 666 777 667
+                    </a>
+                    <a href="tel:+919866687667" className="text-xs hover:text-green-primary transition-colors">
+                      +91 98666 87667
+                    </a>
+                  </div>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail size={14} className="text-amber-primary shrink-0" />
