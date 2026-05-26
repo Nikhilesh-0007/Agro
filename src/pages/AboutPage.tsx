@@ -4,7 +4,7 @@ import AboutSection from "../components/AboutSection";
 import { motion } from "framer-motion";
 import handImg from "@/assets/hand-paddy.jpg";
 import maizeImg from "@/assets/maize.jpg";
-import founderImg from "@/assets/founder.png";
+import founderImg from "@/assets/image.png";
 
 export default function AboutPage() {
   const certs = [
