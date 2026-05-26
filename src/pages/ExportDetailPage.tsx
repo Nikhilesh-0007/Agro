@@ -209,16 +209,16 @@ export default function ExportDetailPage() {
           </div>
 
           {/* Bottom Banner */}
-          <div className="mt-12 rounded-3xl bg-green-primary p-8 md:p-12 text-white shadow-xl text-center relative overflow-hidden">
+          <div className="mt-12 rounded-3xl bg-green-tint border border-green-primary/10 p-8 md:p-12 text-neutral-charcoal shadow-md text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-dot-pattern opacity-10" />
             <div className="relative z-10 max-w-2xl mx-auto">
-              <h3 className="font-heading text-3xl font-bold">Secure Global Cargo Space</h3>
-              <p className="mt-4 text-base leading-relaxed text-white/80">
+              <h3 className="font-heading text-3xl font-bold text-green-primary">Secure Global Cargo Space</h3>
+              <p className="mt-4 text-sm leading-relaxed text-neutral-stone">
                 Ready to export cargo? Reach out directly to our shipping division to coordinate vessel schedules, request freight rates, or review trading lines.
               </p>
               <Link
                 to="/contact"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-amber-primary px-8 py-3.5 font-semibold text-green-primary shadow-lg shadow-amber-primary/30 hover:bg-amber-deep hover:text-white transition-colors"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-green-primary px-8 py-3.5 font-semibold text-white shadow-md hover:bg-amber-primary hover:text-green-primary transition-colors"
               >
                 Connect with Export Desk
               </Link>

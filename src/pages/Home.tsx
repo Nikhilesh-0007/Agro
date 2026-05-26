@@ -4,9 +4,23 @@ import Hero from "../components/Hero";
 import StatsStrip from "../components/StatsStrip";
 import { motion } from "framer-motion";
 import portImg from "@/assets/port.jpg";
-import grainImg from "@/assets/grain-close.jpg";
+import ethImg from "@/assets/eth4.png";
 
 export default function Home() {
+  const cardStaggerContainer = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const cardStaggerItem = {
+    hidden: { opacity: 0, y: 25 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  };
+
   return (
     <>
       <Hero />
@@ -28,7 +42,7 @@ export default function Home() {
               India's Agricultural Heartland, Exported Globally
             </h2>
             <p className="mt-5 text-base leading-relaxed text-neutral-stone">
-              AS Agro Exports is a premier agro trading and export company based in Kakinada, Andhra Pradesh. Specializing in high-starch feed grains, Parboiled IR64 Rice, and bio-ethanol raw materials, we act as a trusted supply-chain partner for leading distilleries, poultry integrations, and global distribution ports.
+              AS Agro Exports is a premier agro trading and export company based in Kakinada, Andhra Pradesh. Specializing in high-starch feed grains, DDGS, Parboiled IR64 Rice, and bio-ethanol raw materials, we act as a trusted supply-chain partner for leading distilleries, poultry integrations, and global distribution ports.
             </p>
             <p className="mt-3 text-sm leading-relaxed text-neutral-stone">
               Backed by robust logistics clearances and proximity to Visakhapatnam and Kakinada ports, we ensure steady, risk-mitigated supply lines 365 days a year.
@@ -58,9 +72,9 @@ export default function Home() {
           >
             <div className="overflow-hidden rounded-3xl shadow-lg border border-green-tint">
               <img
-                src={grainImg}
-                alt="Golden grains close-up"
-                className="aspect-[4/3] w-full object-cover transition-transform duration-500 hover:scale-103"
+                src={ethImg}
+                alt="AS Agro Exports Corporate Heritage"
+                className="aspect-[4/3] w-full object-cover scale-[1.05] origin-bottom transition-transform duration-500 hover:scale-[1.08]"
               />
             </div>
             <div className="absolute -bottom-4 -left-4 rounded-2xl bg-amber-primary px-5 py-3 shadow-xl border border-amber-deep/10">
@@ -84,7 +98,13 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <motion.div
+            variants={cardStaggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          >
             {[
               {
                 id: "rice",
@@ -110,8 +130,9 @@ export default function Home() {
             ].map((c) => (
               <motion.div
                 key={c.id}
-                whileHover={{ y: -8 }}
-                className="flex flex-col rounded-3xl border border-green-tint bg-white p-6 shadow-sm"
+                variants={cardStaggerItem}
+                whileHover={{ y: -8, boxShadow: "0 10px 25px -5px rgba(27, 73, 40, 0.1), 0 8px 10px -6px rgba(27, 73, 40, 0.1)" }}
+                className="flex flex-col rounded-3xl border border-green-tint bg-white p-6 shadow-sm transition-all duration-300"
               >
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-green-tint text-2xl">
                   {c.icon}
@@ -132,7 +153,7 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           <div className="mt-12 text-center">
             <Link
@@ -169,86 +190,87 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="lg:col-span-3 grid gap-4 sm:grid-cols-2">
+          <motion.div
+            variants={cardStaggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="lg:col-span-3 grid gap-4 sm:grid-cols-2"
+          >
             {[
               { icon: <Landmark size={20} />, title: "Ethanol Plants", text: "Providing high-volume yellow corn and broken grains directly to distillers." },
               { icon: <Target size={20} />, title: "Feed Mills", text: "Fueling livestock, cattle, and aquaculture feeds with protein-rich corn." },
               { icon: <ShieldCheck size={20} />, title: "Poultry Integrations", text: "Direct contracts to layer and commercial hatcheries for clean feed grains." },
               { icon: <Ship size={20} />, title: "Global Grains Trade", text: "Handling bulk charter shipments to major ports across three continents." }
             ].map((box, i) => (
-              <div key={i} className="rounded-2xl border border-green-tint bg-white p-5 hover:border-amber-primary transition-colors">
+              <motion.div
+                key={i}
+                variants={cardStaggerItem}
+                whileHover={{ scale: 1.03, borderColor: "#D48A1D", boxShadow: "0 4px 20px -2px rgba(212, 138, 29, 0.1)" }}
+                className="rounded-2xl border border-green-tint bg-white p-5 transition-all duration-300 shadow-sm"
+              >
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-amber-tint text-amber-deep">
                   {box.icon}
                 </div>
                 <h4 className="font-heading text-base font-bold text-neutral-charcoal">{box.title}</h4>
                 <p className="mt-1 text-xs leading-relaxed text-neutral-stone">{box.text}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
         </div>
       </section>
 
       {/* 4. Global Footprint Preview */}
-      <section className="bg-green-primary py-20 px-6 md:px-12 lg:px-24 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-dot-pattern opacity-10" />
+      <section 
+        className="relative py-28 px-6 md:px-12 lg:px-24 overflow-hidden border-y border-green-primary/10 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${portImg})` }}
+      >
         <div className="mx-auto max-w-7xl relative z-10 grid items-center gap-12 lg:grid-cols-2">
-
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="max-w-xl bg-white/95 backdrop-blur-md p-8 md:p-10 rounded-3xl shadow-2xl border border-white/20"
           >
-            <span className="mb-3 inline-block rounded-full bg-amber-primary/20 px-3 py-1 text-xs font-semibold tracking-wider text-amber-primary uppercase">
+            <span className="mb-3 inline-block rounded-full bg-amber-primary/20 border border-amber-primary/30 px-3 py-1 text-xs font-semibold tracking-wider text-amber-deep uppercase">
               Global Grains Desk
             </span>
-            <h2 className="font-heading text-3xl font-bold leading-tight md:text-4xl">
+            <h2 className="font-heading text-3xl font-bold leading-tight text-green-primary md:text-4xl">
               Rapid Transit To 15+ International Ports
             </h2>
-            <p className="mt-5 text-sm leading-relaxed text-white/80">
+            <p className="mt-5 text-base leading-relaxed text-neutral-stone">
               Our export freight division handles direct charters and 20ft containerized logistics. Routing from Kakinada and Visakhapatnam deep berths, we deliver regular grain shipments directly to main global ports like Cotonou, Lome, Abidjan, Haiphong, and Jebel Ali.
             </p>
 
             <div className="mt-6 flex flex-col gap-3">
               <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-amber-primary/20 text-amber-primary">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-primary/10 text-green-primary shrink-0">
                   <Award size={16} />
                 </div>
-                <p className="text-xs font-semibold">100% Pre-Shipment Inspection Certification (SGS / BV)</p>
+                <p className="text-sm font-medium text-neutral-stone">100% Pre-Shipment Inspection Certification (SGS / BV)</p>
               </div>
               <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-amber-primary/20 text-amber-primary">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-primary/10 text-green-primary shrink-0">
                   <Ship size={16} />
                 </div>
-                <p className="text-xs font-semibold">Proximity to deep water berths ensures minimal handling delays</p>
+                <p className="text-sm font-medium text-neutral-stone">Proximity to deep water berths ensures minimal handling delays</p>
               </div>
             </div>
 
             <div className="mt-8">
               <Link
                 to="/export-countries"
-                className="inline-flex items-center gap-2 rounded-full bg-amber-primary px-6 py-3 text-sm font-semibold text-green-primary shadow-md hover:bg-white hover:text-green-primary transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-amber-primary px-6 py-3 text-sm font-semibold text-green-primary shadow-md hover:bg-green-primary hover:text-white transition-colors"
               >
                 View Shipping Routes & Ports <ChevronRight size={14} />
               </Link>
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="overflow-hidden rounded-3xl shadow-2xl border border-white/10"
-          >
-            <img
-              src={portImg}
-              alt="Cargo container loading port"
-              className="aspect-[4/3] w-full object-cover"
-            />
-          </motion.div>
-
+          {/* Right side left empty to showcase background image on desktop */}
+          <div className="hidden lg:block" />
         </div>
       </section>
 

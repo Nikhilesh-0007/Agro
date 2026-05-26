@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Clock } from "lucide-react";
-import grain from "@/assets/grain-close.jpg";
+import riceImg from "@/assets/rice.png";
 import maize from "@/assets/maize.jpg";
 import hand from "@/assets/hand-paddy.jpg";
-import port from "@/assets/port.jpg";
 
 export default function AboutSection() {
   return (
@@ -35,7 +34,7 @@ export default function AboutSection() {
           <div className="mt-8 flex flex-wrap gap-3">
             {[
               { icon: <MapPin size={14} />, text: "Kakinada, A.P." },
-              { icon: <Phone size={14} />, text: "+91 966 677 7667" },
+              { icon: <Phone size={14} />, text: "+91 9 666 777 667" },
               { icon: <Clock size={14} />, text: "Open All 7 Days" },
             ].map((p) => (
               <span
@@ -80,8 +79,8 @@ export default function AboutSection() {
             />
             <div className="flex flex-col gap-4">
               <img
-                src={grain}
-                alt="Golden rice grains close-up"
+                src={riceImg}
+                alt="Premium graded rice"
                 loading="lazy"
                 width={800}
                 height={800}
@@ -97,14 +96,7 @@ export default function AboutSection() {
               />
             </div>
           </div>
-          <img
-            src={port}
-            alt="Export shipping containers"
-            loading="lazy"
-            width={800}
-            height={800}
-            className="mt-4 aspect-[16/7] w-full rounded-3xl object-cover shadow-md"
-          />
+
           <div className="absolute -bottom-4 -left-4 rounded-2xl bg-amber-primary px-5 py-3 shadow-xl">
             <p className="text-[10px] font-semibold tracking-widest text-green-primary uppercase">
               Established

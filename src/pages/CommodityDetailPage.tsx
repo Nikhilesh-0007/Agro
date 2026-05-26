@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 // Import authentic local assets
-import handPaddy from "@/assets/hand-paddy.jpg";
+import irImg from "@/assets/ir.png";
 import maizeImg from "@/assets/maize.jpg";
-import grainClose from "@/assets/grain-close.jpg";
+import brRiceImg from "@/assets/br_rice.png";
+import ddgsImg from "@/assets/DDGS.png";
 
 const commodityData: Record<string, {
   name: string;
@@ -22,7 +23,7 @@ const commodityData: Record<string, {
   rice: {
     name: "Parboiled IR64 Rice",
     titleName: "IR64 Parboiled Rice (Premium Export Grade)",
-    image: handPaddy,
+    image: irImg,
     desc: "Our Parboiled IR64 Rice is highly demanded globally for its long grain, clean milling, and high nutritional value. Sourced directly from trusted farms in Andhra Pradesh, it undergoes rigorous parboiling processes to retain natural nutrients.",
     specs: [
       { parameter: "Average Length", value: "6.00 mm - 6.40 mm" },
@@ -35,7 +36,7 @@ const commodityData: Record<string, {
     destinations: ["Benin (Cotonou)", "Togo (Lome)", "Ivory Coast (Abidjan)", "Guinea (Conakry)", "UAE", "United Kingdom"],
     related: [
       { name: "Yellow Maize", id: "maize", image: maizeImg },
-      { name: "Broken Rice", id: "broken-rice", image: grainClose }
+      { name: "Broken Rice", id: "broken-rice", image: brRiceImg }
     ]
   },
   maize: {
@@ -60,7 +61,7 @@ const commodityData: Record<string, {
   "broken-rice": {
     name: "Broken Rice (Grade A)",
     titleName: "Graded Broken Rice (High-Starch Industrial)",
-    image: grainClose,
+    image: brRiceImg,
     desc: "Grade-A broken rice filtered during the milling process of premium non-basmati varieties. Highly rich in starch, it serves as the ultimate raw material for alcohol distilleries, ethanol fermentation, and animal feed preparation.",
     specs: [
       { parameter: "Broken Ratio", value: "100% Broken" },
@@ -72,7 +73,7 @@ const commodityData: Record<string, {
     packaging: ["50 kg PP bags", "Loose bulk truck loaders"],
     destinations: ["A.P. Ethanol Distilleries", "Odisha Fermentation Plants", "Vietnam", "West Africa"],
     related: [
-      { name: "Parboiled IR64", id: "rice", image: handPaddy },
+      { name: "Parboiled IR64", id: "rice", image: irImg },
       { name: "Ethanol Raw Grains", id: "ethanol-materials", image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=600&q=80" }
     ]
   },
@@ -125,9 +126,24 @@ const commodityData: Record<string, {
     ],
     packaging: ["Bulk dumpers", "50 kg unbranded PP sacks"],
     destinations: ["Andhra Pradesh Distilleries", "Odisha Bio-fuel Plants", "Regional Refineries"],
+  },
+  ddgs: {
+    name: "DDGS (Distillers Grains)",
+    titleName: "DDGS - Distillers Dried Grains with Solubles (Premium Feed Grade)",
+    image: ddgsImg,
+    desc: "A nutrient-rich, high-protein co-product of ethanol distillation, widely used as a cost-effective feed supplement for poultry, livestock, and aquaculture.",
+    specs: [
+      { parameter: "Crude Protein", value: "26% - 28% Min" },
+      { parameter: "Moisture", value: "10% Max" },
+      { parameter: "Crude Fat", value: "7% - 8% Min" },
+      { parameter: "Crude Fibre", value: "9% Max" },
+      { parameter: "Aflatoxin", value: "20 ppb Max" },
+    ],
+    packaging: ["50 kg PP bags", "Loose bulk truck loaders"],
+    destinations: ["Domestic Feed Mills (AP, Karnataka, Tamil Nadu)", "Vietnam", "Bangladesh", "Sri Lanka"],
     related: [
-      { name: "Broken Rice", id: "broken-rice", image: grainClose },
-      { name: "Yellow Maize", id: "maize", image: maizeImg }
+      { name: "Yellow Maize", id: "maize", image: maizeImg },
+      { name: "Broken Rice", id: "broken-rice", image: brRiceImg }
     ]
   }
 };
@@ -281,18 +297,18 @@ export default function CommodityDetailPage() {
           </div>
 
           {/* Bottom Row: RFQ Inquiry Form */}
-          <div className="mt-12 rounded-3xl bg-green-primary p-8 md:p-12 text-white shadow-xl relative overflow-hidden">
+          <div className="mt-12 rounded-3xl bg-green-tint border border-green-primary/10 p-8 md:p-12 text-neutral-charcoal shadow-md relative overflow-hidden">
             <div className="absolute inset-0 bg-dot-pattern opacity-10" />
             <div className="relative z-10 grid gap-10 lg:grid-cols-5">
               <div className="lg:col-span-2">
-                <span className="inline-block rounded-full bg-amber-primary/20 px-3 py-1 text-xs font-semibold tracking-wider text-amber-primary uppercase mb-4">
+                <span className="inline-block rounded-full bg-amber-tint border border-amber-primary/20 px-3 py-1 text-xs font-semibold tracking-wider text-amber-deep uppercase mb-4">
                   Request For Quote
                 </span>
-                <h3 className="font-heading text-3xl font-bold md:text-4xl">Get Corporate Pricing</h3>
-                <p className="mt-4 text-base leading-relaxed text-white/80">
+                <h3 className="font-heading text-3xl font-bold text-green-primary md:text-4xl">Get Corporate Pricing</h3>
+                <p className="mt-4 text-sm leading-relaxed text-neutral-stone">
                   Submit your bulk procurement requirements and our export team will contact you with exact CIF/FOB pricing, shipping timelines, and payment options within 24 hours.
                 </p>
-                <div className="mt-6 flex items-center gap-3 text-sm text-amber-primary font-semibold">
+                <div className="mt-6 flex items-center gap-3 text-sm text-green-primary font-bold">
                   <MessageSquare size={16} />
                   Direct WhatsApp Response Enabled
                 </div>
@@ -306,7 +322,7 @@ export default function CommodityDetailPage() {
                     placeholder="Contact Name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white placeholder-white/50 focus:border-amber-primary focus:bg-white focus:text-green-primary focus:outline-none transition-all"
+                    className="rounded-xl border border-green-primary/15 bg-white px-4 py-3 text-sm text-neutral-charcoal placeholder:text-neutral-stone/60 focus:border-green-primary focus:ring-1 focus:ring-green-primary focus:outline-none transition-all"
                   />
                   <input
                     type="email"
@@ -314,7 +330,7 @@ export default function CommodityDetailPage() {
                     placeholder="Corporate Email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white placeholder-white/50 focus:border-amber-primary focus:bg-white focus:text-green-primary focus:outline-none transition-all"
+                    className="rounded-xl border border-green-primary/15 bg-white px-4 py-3 text-sm text-neutral-charcoal placeholder:text-neutral-stone/60 focus:border-green-primary focus:ring-1 focus:ring-green-primary focus:outline-none transition-all"
                   />
                   <input
                     type="text"
@@ -322,7 +338,7 @@ export default function CommodityDetailPage() {
                     placeholder="Phone (WhatsApp Number)"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white placeholder-white/50 focus:border-amber-primary focus:bg-white focus:text-green-primary focus:outline-none transition-all"
+                    className="rounded-xl border border-green-primary/15 bg-white px-4 py-3 text-sm text-neutral-charcoal placeholder:text-neutral-stone/60 focus:border-green-primary focus:ring-1 focus:ring-green-primary focus:outline-none transition-all"
                   />
                   <input
                     type="text"
@@ -330,7 +346,7 @@ export default function CommodityDetailPage() {
                     placeholder="Estimated Quantity (Tons)"
                     value={formData.qty}
                     onChange={(e) => setFormData({ ...formData, qty: e.target.value })}
-                    className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white placeholder-white/50 focus:border-amber-primary focus:bg-white focus:text-green-primary focus:outline-none transition-all"
+                    className="rounded-xl border border-green-primary/15 bg-white px-4 py-3 text-sm text-neutral-charcoal placeholder:text-neutral-stone/60 focus:border-green-primary focus:ring-1 focus:ring-green-primary focus:outline-none transition-all"
                   />
                   <textarea
                     required
@@ -338,11 +354,11 @@ export default function CommodityDetailPage() {
                     placeholder="Describe Packaging & Destination Requirements..."
                     value={formData.desc}
                     onChange={(e) => setFormData({ ...formData, desc: e.target.value })}
-                    className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white placeholder-white/50 focus:border-amber-primary focus:bg-white focus:text-green-primary focus:outline-none transition-all sm:col-span-2"
+                    className="rounded-xl border border-green-primary/15 bg-white px-4 py-3 text-sm text-neutral-charcoal placeholder:text-neutral-stone/60 focus:border-green-primary focus:ring-1 focus:ring-green-primary focus:outline-none transition-all sm:col-span-2"
                   />
                   <button
                     type="submit"
-                    className="rounded-xl bg-amber-primary py-3.5 text-sm font-semibold text-green-primary shadow-lg hover:bg-amber-deep hover:text-white transition-all transform active:scale-98 sm:col-span-2"
+                    className="rounded-xl bg-green-primary py-3.5 text-sm font-semibold text-white shadow-md hover:bg-amber-primary hover:text-green-primary transition-all transform active:scale-98 sm:col-span-2"
                   >
                     Submit Quotation Request
                   </button>
@@ -352,7 +368,7 @@ export default function CommodityDetailPage() {
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="mt-4 flex items-center gap-2 rounded-xl bg-amber-primary/20 border border-amber-primary/30 p-3 text-sm text-amber-primary"
+                    className="mt-4 flex items-center gap-2 rounded-xl bg-green-primary/10 border border-green-primary/20 p-3 text-sm text-green-primary"
                   >
                     <CheckCircle size={16} />
                     Thank you! Your quotation request has been submitted successfully. Our desk will contact you shortly.

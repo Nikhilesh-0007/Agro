@@ -40,13 +40,13 @@ export default function ClientsPage() {
       <PageBanner title="Our Enterprise Partners" breadcrumb="Clients" />
 
       {/* 1. Success Metrics Counters Strip */}
-      <section className="bg-green-primary py-12 px-6 md:px-12 lg:px-24 text-white relative overflow-hidden">
+      <section className="bg-green-tint py-12 px-6 md:px-12 lg:px-24 text-neutral-charcoal relative overflow-hidden border-b border-green-primary/10">
         <div className="absolute inset-0 bg-dot-pattern opacity-10" />
         <div className="mx-auto max-w-7xl relative z-10 grid gap-6 grid-cols-2 md:grid-cols-4 text-center">
           {stats.map((s, idx) => (
-            <div key={idx} className="p-4 border-r border-white/10 last:border-0">
-              <p className="font-heading text-3xl font-extrabold text-amber-primary md:text-4xl">{s.value}</p>
-              <p className="text-xs text-white/70 font-semibold uppercase tracking-wider mt-1">{s.label}</p>
+            <div key={idx} className="p-4 border-r border-green-primary/10 last:border-0">
+              <p className="font-heading text-3xl font-extrabold text-amber-deep md:text-4xl">{s.value}</p>
+              <p className="text-xs text-green-primary/85 font-semibold uppercase tracking-wider mt-1">{s.label}</p>
             </div>
           ))}
         </div>

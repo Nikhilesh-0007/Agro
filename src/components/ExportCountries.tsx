@@ -64,10 +64,10 @@ export default function ExportCountries() {
             </div>
           </div>
 
-          <div className="rounded-3xl bg-green-primary p-8 text-white shadow-xl">
+          <div className="rounded-3xl bg-white border border-green-primary/10 p-8 text-neutral-charcoal shadow-md">
             <div className="mb-6 flex items-center gap-3">
               <span className="h-2 w-8 rounded-full bg-amber-primary" />
-              <h3 className="font-heading text-2xl font-bold">Other Destinations</h3>
+              <h3 className="font-heading text-2xl font-bold text-green-primary">Other Destinations</h3>
             </div>
             <div className="flex flex-col gap-3">
               {other.map((c, i) => (
@@ -77,14 +77,14 @@ export default function ExportCountries() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
-                  className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 px-4 py-3 backdrop-blur-sm"
+                  className="flex items-center gap-3 rounded-2xl border border-green-primary/5 bg-green-tint/50 px-4 py-3"
                 >
                   <span className="text-2xl">{c.flag}</span>
-                  <span className="text-sm font-medium">{c.name}</span>
+                  <span className="text-sm font-semibold text-neutral-charcoal">{c.name}</span>
                 </motion.div>
               ))}
             </div>
-            <p className="mt-6 text-xs leading-relaxed text-white/70">
+            <p className="mt-6 text-xs leading-relaxed text-neutral-stone">
               Logistics-ready operations ensure timely delivery to major ports across three
               continents.
             </p>

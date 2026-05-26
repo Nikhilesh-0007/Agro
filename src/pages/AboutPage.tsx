@@ -4,6 +4,7 @@ import AboutSection from "../components/AboutSection";
 import { motion } from "framer-motion";
 import handImg from "@/assets/hand-paddy.jpg";
 import maizeImg from "@/assets/maize.jpg";
+import founderImg from "@/assets/founder.png";
 
 export default function AboutPage() {
   const certs = [
@@ -111,8 +112,8 @@ export default function AboutPage() {
 
             <div className="overflow-hidden rounded-3xl shadow-md border border-green-tint">
               <img
-                src={maizeImg}
-                alt="Maize processing"
+                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
+                alt="Modern logistics warehouse facility"
                 className="aspect-[4/3] w-full object-cover"
               />
             </div>
@@ -149,24 +150,62 @@ export default function AboutPage() {
       </section>
 
       {/* 6. Leadership Segment */}
-      <section className="bg-amber-tint py-20 px-6 md:px-12 lg:px-24 border-t border-amber-primary/10">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="mb-3 inline-block rounded-full bg-amber-primary/20 px-3 py-1 text-xs font-semibold tracking-wider text-amber-deep uppercase">
-            Corporate Leadership
-          </span>
-          <h2 className="font-heading text-3xl font-bold text-green-primary md:text-4xl">Managing Director's Desk</h2>
+      <section className="bg-amber-tint py-24 px-6 md:px-12 lg:px-24 border-t border-amber-primary/10">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center mb-16">
+            <span className="mb-3 inline-block rounded-full bg-amber-primary/20 px-3 py-1 text-xs font-semibold tracking-wider text-amber-deep uppercase">
+              Corporate Leadership
+            </span>
+            <h2 className="font-heading text-3xl font-bold text-green-primary md:text-4xl">Managing Director's Desk</h2>
+          </div>
 
-          <div className="mt-8 rounded-3xl border border-green-tint bg-white p-8 md:p-12 shadow-md relative">
-            <div className="absolute -top-4 left-12 rounded-lg bg-amber-primary px-3 py-1 text-xs font-bold text-green-primary uppercase">
-              Managing Director
+          <div className="grid gap-12 lg:grid-cols-12 items-center rounded-3xl border border-green-tint bg-white p-8 md:p-12 shadow-md relative overflow-hidden">
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative group max-w-sm overflow-hidden rounded-3xl shadow-lg border border-green-tint/40">
+                <img
+                  src={founderImg}
+                  alt="Mr. Seshu Pampana (Mr. ASHWIN)"
+                  className="aspect-[3/4] w-full object-cover transition-transform duration-500 group-hover:scale-103"
+                />
+                <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-green-primary/90 backdrop-blur-md px-5 py-3 shadow-xl text-center border border-white/10">
+                  <p className="font-heading text-base font-bold text-white">Mr. Seshu Pampana</p>
+                  <p className="text-[10px] font-semibold tracking-widest text-amber-primary uppercase mt-0.5">(Mr. ASHWIN)</p>
+                  <p className="text-[10px] font-semibold text-white/80 mt-1">Founder & Managing Director</p>
+                </div>
+              </div>
             </div>
-            <p className="text-base italic leading-relaxed text-neutral-stone">
-              "At AS Agro Exports, our trading model is built on transparency, strict physical quality controls, and scheduling absolute on-time logistics sailings. We don't just act as brokers—we maintain skin in the game by managing local sourcing, storage facilities, and dock handling, building credibility with every metric ton shipped."
-            </p>
-            <div className="mt-6 border-t border-green-tint/50 pt-4 flex flex-col items-center">
-              <p className="font-heading text-lg font-bold text-neutral-charcoal">Mr. Seshu Pampana</p>
-              <p className="text-xs font-semibold text-amber-deep mt-0.5">Founder & Managing Director</p>
-              <a href="mailto:asagroexportsltd@gmail.com" className="text-xs text-green-mid hover:text-green-primary mt-1">asagroexportsltd@gmail.com</a>
+
+            <div className="lg:col-span-7 flex flex-col justify-center">
+              <h3 className="font-heading text-2xl font-bold text-green-primary mb-6">
+                Meet Our Founder
+              </h3>
+              
+              <div className="flex flex-col gap-5 text-sm leading-relaxed text-neutral-stone">
+                <p>
+                  Mr. Seshu Pampana ( Mr.ASHWIN ) is a visionary agribusiness leader whose life and career are deeply rooted in a multigenerational farming legacy. By uniting this rich agricultural heritage with extensive expertise in global trade, he established A S Agro Exports, a company renowned for its sustainable supply chains and world-class commodity exports.
+                </p>
+                <p>
+                  Recognizing the critical global shift toward renewable energy, Mr. Pampana has strategically expanded the company’s horizons, specializing in the vital supply of rice and agricultural residues to state-of-the-art ethanol plants. His dynamic leadership seamlessly unites traditional farming roots with modern green energy initiatives, creating a powerful bridge from local growers to international industrial markets.
+                </p>
+                <p>
+                  Driven by an enduring family legacy of integrity and innovation, Mr. Pampana ensures that A S Agro Exports is not just participating in global trade—it is actively pioneering eco-friendly solutions for a sustainable tomorrow.
+                </p>
+              </div>
+
+              <div className="mt-8 border-t border-green-tint/50 pt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                  <p className="text-xs text-neutral-stone">Direct Contact</p>
+                  <a
+                    href="mailto:asagroexportsltd@gmail.com"
+                    className="text-sm font-semibold text-green-mid hover:text-green-primary transition-colors"
+                  >
+                    asagroexportsltd@gmail.com
+                  </a>
+                </div>
+                <div className="rounded-full bg-amber-tint px-4 py-2 border border-amber-primary/10 text-xs font-bold text-amber-deep">
+                  Multigenerational Agribusiness Legacy
+                </div>
+              </div>
             </div>
           </div>
         </div>

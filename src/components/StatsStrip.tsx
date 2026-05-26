@@ -27,7 +27,7 @@ const stats = [
 
 export default function StatsStrip() {
   return (
-    <section className="bg-green-primary py-14 text-white">
+    <section className="bg-green-tint py-14 text-neutral-charcoal border-y border-green-primary/10">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 md:grid-cols-4 md:px-12">
         {stats.map((s, i) => (
           <motion.div
@@ -38,13 +38,13 @@ export default function StatsStrip() {
             transition={{ duration: 0.5, delay: i * 0.1 }}
             className="text-center"
           >
-            <div className="mb-3 flex justify-center text-amber-primary">
+            <div className="mb-3 flex justify-center text-green-primary">
               <s.icon size={36} strokeWidth={1.5} />
             </div>
-            <div className="font-heading text-4xl font-bold text-amber-primary md:text-5xl">
+            <div className="font-heading text-4xl font-bold text-amber-deep md:text-5xl">
               <Counter to={s.value} suffix={s.suffix} />
             </div>
-            <div className="mt-1 text-xs font-medium tracking-wider text-white/75 uppercase">
+            <div className="mt-1 text-xs font-bold tracking-wider text-green-primary/80 uppercase">
               {s.label}
             </div>
           </motion.div>

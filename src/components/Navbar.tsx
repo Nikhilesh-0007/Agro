@@ -16,7 +16,8 @@ const links = [
       { label: "Broken Rice", to: "/commodities/broken-rice" },
       { label: "Pearl & Finger Millets", to: "/commodities/millet" },
       { label: "Feed Grains & Products", to: "/commodities/feed-products" },
-      { label: "Ethanol Raw Grains", to: "/commodities/ethanol-materials" }
+      { label: "Ethanol Raw Grains", to: "/commodities/ethanol-materials" },
+      { label: "DDGS (Distillers Grains)", to: "/commodities/ddgs" }
     ]
   },
   { label: "Industries", to: "/segments" },
@@ -54,30 +55,27 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const isHome = location.pathname === "/";
-  const isSolid = !isHome || scrolled;
-
   return (
-    <motion.nav
-      animate={{
-        backgroundColor: isSolid ? "rgba(255, 255, 255, 0.98)" : "rgba(255, 255, 255, 0)",
-        boxShadow: isSolid ? "0 8px 30px rgba(0,0,0,0.06)" : "0 0 0 rgba(0,0,0,0)",
-        borderColor: isSolid ? "rgba(245, 168, 0, 0.1)" : "rgba(0, 0, 0, 0)",
-      }}
-      transition={{ duration: 0.3 }}
-      className="fixed inset-x-0 top-0 z-50 border-b backdrop-blur-sm"
+    <nav
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        scrolled || open
+          ? "border-b border-green-primary/10 bg-white/90 shadow-md backdrop-blur-lg py-1 md:py-2"
+          : "border-b border-transparent bg-transparent py-3 md:py-5"
+      }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 md:px-12">
         <Link to="/" className="flex items-center">
           <img
             src={logoBgImg}
             alt="AS Agro Exports"
-            className="h-16 md:h-20 w-auto object-contain transition-transform duration-300 hover:scale-102"
+            className={`w-auto object-contain transition-all duration-300 ${
+              scrolled ? "h-12 md:h-14" : "h-16 md:h-20"
+            } hover:scale-105`}
           />
         </Link>
 
         {/* Desktop Links with Hover Dropdowns */}
-        <div className="hidden items-center gap-6 lg:flex">
+        <div className="hidden items-center gap-8 lg:flex">
           {links.map((l) => {
             if (l.dropdown) {
               const isCommodities = l.label === "Commodities";
@@ -94,30 +92,39 @@ export default function Navbar() {
                   <NavLink
                     to={l.to}
                     className={({ isActive }) =>
-                      `flex items-center gap-1 text-sm font-semibold transition-colors duration-200 ${
-                        isSolid
-                          ? isActive ? "text-amber-primary" : "text-green-primary hover:text-amber-primary"
-                          : isActive ? "text-amber-primary" : "text-white hover:text-amber-primary"
+                      `relative px-1 py-1.5 flex items-center gap-1 text-sm font-semibold transition-colors duration-200 ${
+                        isActive ? "text-amber-deep" : "text-green-primary hover:text-amber-deep"
                       }`
                     }
                   >
-                    {l.label}
-                    <motion.span
-                      animate={{ rotate: isHovered ? 180 : 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="inline-block"
-                    >
-                      <ChevronDown size={14} />
-                    </motion.span>
+                    {({ isActive }) => (
+                      <>
+                        {l.label}
+                        <motion.span
+                          animate={{ rotate: isHovered ? 180 : 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="inline-block"
+                        >
+                          <ChevronDown size={14} />
+                        </motion.span>
+                        {isActive && (
+                          <motion.div
+                            layoutId="activeNavUnderline"
+                            className="absolute bottom-0 left-0 right-0 h-[3px] rounded-full bg-amber-primary"
+                            transition={{ type: "spring", stiffness: 350, damping: 25 }}
+                          />
+                        )}
+                      </>
+                    )}
                   </NavLink>
 
                   <AnimatePresence>
                     {isHovered && (
                       <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        transition={{ duration: 0.2 }}
+                        initial={{ opacity: 0, y: 15, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ type: "spring", duration: 0.3 }}
                         className="absolute left-0 mt-2 w-64 rounded-2xl border border-amber-primary/10 bg-white p-4 shadow-xl backdrop-blur-md z-50 flex flex-col gap-1.5"
                       >
                         {l.dropdown.map((sub) => (
@@ -125,9 +132,12 @@ export default function Navbar() {
                             key={sub.to}
                             to={sub.to}
                             onClick={() => setHovered(false)}
-                            className="rounded-xl px-3 py-2 text-xs font-semibold text-green-primary hover:bg-amber-primary/10 hover:text-amber-deep transition-all"
+                            className="group flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold text-green-primary hover:bg-amber-primary/10 hover:text-amber-deep transition-all"
                           >
-                            {sub.label}
+                            <span>{sub.label}</span>
+                            <span className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 text-amber-deep">
+                              →
+                            </span>
                           </Link>
                         ))}
                       </motion.div>
@@ -142,28 +152,37 @@ export default function Navbar() {
                 key={l.to}
                 to={l.to}
                 className={({ isActive }) =>
-                  `text-sm font-semibold transition-colors duration-200 ${
-                    isSolid
-                      ? isActive ? "text-amber-primary" : "text-green-primary hover:text-amber-primary"
-                      : isActive ? "text-amber-primary" : "text-white hover:text-amber-primary"
+                  `relative px-1 py-1.5 text-sm font-semibold transition-colors duration-200 ${
+                    isActive ? "text-amber-deep" : "text-green-primary hover:text-amber-deep"
                   }`
                 }
               >
-                {l.label}
+                {({ isActive }) => (
+                  <>
+                    {l.label}
+                    {isActive && (
+                      <motion.div
+                        layoutId="activeNavUnderline"
+                        className="absolute bottom-0 left-0 right-0 h-[3px] rounded-full bg-amber-primary"
+                        transition={{ type: "spring", stiffness: 350, damping: 25 }}
+                      />
+                    )}
+                  </>
+                )}
               </NavLink>
             );
           })}
         </div>
 
-        <button
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
           aria-label="Menu"
           onClick={() => setOpen((v) => !v)}
-          className={`rounded-full p-2 lg:hidden transition-colors ${
-            isSolid ? "text-green-primary" : "text-white"
-          }`}
+          className="rounded-full p-2 lg:hidden text-green-primary hover:text-amber-primary transition-colors"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        </motion.button>
       </div>
 
       {/* Mobile Drawer with Accordion Dropdowns */}
@@ -245,6 +264,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   );
 }

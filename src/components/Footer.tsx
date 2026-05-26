@@ -24,6 +24,7 @@ export default function Footer() {
     { label: "Pearl Millets", to: "/commodities/millet" },
     { label: "Feed Grains", to: "/commodities/feed-products" },
     { label: "Ethanol Raw Grains", to: "/commodities/ethanol-materials" },
+    { label: "DDGS (Distillers Grains)", to: "/commodities/ddgs" },
   ];
 
   const network = [
@@ -34,14 +35,14 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-[#111612] text-white/95 pt-20 pb-8 overflow-hidden border-t border-green-primary/20">
+    <footer className="relative bg-amber-tint text-neutral-charcoal pt-20 pb-8 overflow-hidden border-t border-amber-primary/10">
       {/* Decorative light green/yellow gradient glow */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[150px] bg-gradient-to-b from-green-primary/10 via-transparent to-transparent blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-[500px] h-[150px] bg-gradient-to-b from-green-primary/5 via-transparent to-transparent blur-3xl pointer-events-none" />
       <div className="absolute top-0 right-1/4 w-[400px] h-[150px] bg-gradient-to-b from-amber-primary/5 via-transparent to-transparent blur-3xl pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-24 relative z-10">
-        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 pb-16 border-b border-white/10">
-          
+        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 pb-16 border-b border-green-primary/10">
+
           {/* Col 1: Logo & About Bio */}
           <div className="lg:col-span-1.5 flex flex-col gap-5">
             <Link to="/" className="flex items-center">
@@ -51,18 +52,18 @@ export default function Footer() {
                 className="h-14 md:h-16 w-auto object-contain"
               />
             </Link>
-            <p className="text-sm leading-relaxed text-white/70 mt-2">
+            <p className="text-sm leading-relaxed text-neutral-stone mt-2">
               A premier trading and export company bridging India's rich agricultural heartland in Andhra Pradesh to global markets. Committed to uncompromising quality in Rice, Maize, and allied agro commodities.
             </p>
-            <div className="flex items-center gap-2 text-amber-primary text-xs font-semibold tracking-wider uppercase mt-1">
-              <span className="h-1.5 w-1.5 rounded-full bg-amber-primary animate-pulse" />
+            <div className="flex items-center gap-2 text-green-primary text-xs font-semibold tracking-wider uppercase mt-1">
+              <span className="h-1.5 w-1.5 rounded-full bg-green-primary animate-pulse" />
               Established & Logistics-Ready
             </div>
           </div>
 
           {/* Col 2: Quick Links */}
           <div className="flex flex-col gap-4">
-            <h4 className="font-heading text-lg font-bold text-amber-primary tracking-wide relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-amber-primary">
+            <h4 className="font-heading text-lg font-bold text-green-primary tracking-wide relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-amber-primary">
               Quick Links
             </h4>
             <ul className="flex flex-col gap-2.5 mt-2">
@@ -70,9 +71,9 @@ export default function Footer() {
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="text-sm text-white/70 hover:text-amber-primary transition-colors duration-200 flex items-center gap-1.5 group"
+                    className="text-sm text-neutral-stone hover:text-amber-deep transition-colors duration-200 flex items-center gap-1.5 group"
                   >
-                    <span className="h-1 w-1 rounded-full bg-white/20 group-hover:bg-amber-primary transition-colors" />
+                    <span className="h-1 w-1 rounded-full bg-neutral-stone/20 group-hover:bg-amber-primary transition-colors" />
                     {link.label}
                   </Link>
                 </li>
@@ -82,7 +83,7 @@ export default function Footer() {
 
           {/* Col 3: Commodities Links */}
           <div className="flex flex-col gap-4">
-            <h4 className="font-heading text-lg font-bold text-amber-primary tracking-wide relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-amber-primary">
+            <h4 className="font-heading text-lg font-bold text-green-primary tracking-wide relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-amber-primary">
               Commodities
             </h4>
             <ul className="flex flex-col gap-2.5 mt-2">
@@ -90,9 +91,9 @@ export default function Footer() {
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className="text-sm text-white/70 hover:text-amber-primary transition-colors duration-200 flex items-center gap-1.5 group"
+                    className="text-sm text-neutral-stone hover:text-amber-deep transition-colors duration-200 flex items-center gap-1.5 group"
                   >
-                    <span className="h-1 w-1 rounded-full bg-white/20 group-hover:bg-amber-primary transition-colors" />
+                    <span className="h-1 w-1 rounded-full bg-neutral-stone/20 group-hover:bg-amber-primary transition-colors" />
                     {item.label}
                   </Link>
                 </li>
@@ -102,7 +103,7 @@ export default function Footer() {
 
           {/* Col 4: Network Links */}
           <div className="flex flex-col gap-4">
-            <h4 className="font-heading text-lg font-bold text-amber-primary tracking-wide relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-amber-primary">
+            <h4 className="font-heading text-lg font-bold text-green-primary tracking-wide relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-amber-primary">
               Global Ports
             </h4>
             <ul className="flex flex-col gap-2.5 mt-2">
@@ -110,9 +111,9 @@ export default function Footer() {
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className="text-sm text-white/70 hover:text-amber-primary transition-colors duration-200 flex items-center gap-1.5 group"
+                    className="text-sm text-neutral-stone hover:text-amber-deep transition-colors duration-200 flex items-center gap-1.5 group"
                   >
-                    <span className="h-1 w-1 rounded-full bg-white/20 group-hover:bg-amber-primary transition-colors" />
+                    <span className="h-1 w-1 rounded-full bg-neutral-stone/20 group-hover:bg-amber-primary transition-colors" />
                     {item.label}
                   </Link>
                 </li>
@@ -122,31 +123,31 @@ export default function Footer() {
 
           {/* Col 5: Branch Office Details & Contact Person */}
           <div className="lg:col-span-1 flex flex-col gap-4">
-            <h4 className="font-heading text-lg font-bold text-amber-primary tracking-wide relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-amber-primary">
+            <h4 className="font-heading text-lg font-bold text-green-primary tracking-wide relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-amber-primary">
               Contact Desk
             </h4>
-            <div className="flex flex-col gap-3.5 mt-2 text-sm text-white/70">
+            <div className="flex flex-col gap-3.5 mt-2 text-sm text-neutral-stone">
               <div className="flex gap-2">
                 <MapPin size={16} className="text-amber-primary shrink-0 mt-0.5" />
                 <p className="text-xs leading-relaxed">
-                  <span className="font-semibold text-white block">Corporate Office:</span>
+                  <span className="font-semibold text-neutral-charcoal block">Corporate Office:</span>
                   KVS Towers, Rajeevi Street, Dairy Farm Centre, Kakinada, AP - 533003
                 </p>
               </div>
-              <div className="flex flex-col gap-2 border-t border-white/5 pt-3">
+              <div className="flex flex-col gap-2 border-t border-green-primary/10 pt-3">
                 <div className="flex items-center gap-2">
                   <User size={14} className="text-amber-primary shrink-0" />
-                  <span className="text-xs font-semibold text-white">Mr. Seshu Pampana</span>
+                  <span className="text-xs font-semibold text-neutral-charcoal">Mr. Seshu Pampana</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone size={14} className="text-amber-primary shrink-0" />
-                  <a href="tel:+919666777667" className="text-xs hover:text-amber-primary transition-colors">
-                    +91 966 677 7667
+                  <a href="tel:+919666777667" className="text-xs hover:text-green-primary transition-colors">
+                    +91 9 666 777 667
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail size={14} className="text-amber-primary shrink-0" />
-                  <a href="mailto:asagroexportsltd@gmail.com" className="text-xs hover:text-amber-primary transition-colors break-all">
+                  <a href="mailto:asagroexportsltd@gmail.com" className="text-xs hover:text-green-primary transition-colors break-all">
                     asagroexportsltd@gmail.com
                   </a>
                 </div>
@@ -161,16 +162,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-stone">
           <p>© {new Date().getFullYear()} AS Agro Exports. All Rights Reserved. Built for global agricultural trade excellence.</p>
           <div className="flex items-center gap-4">
-            <Link to="/about" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="/contact" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link to="/about" className="hover:text-neutral-charcoal transition-colors">Privacy Policy</Link>
+            <Link to="/contact" className="hover:text-neutral-charcoal transition-colors">Terms of Service</Link>
             <motion.button
-              whileHover={{ scale: 1.1, backgroundColor: "#F5A800", color: "#1A6B2F" }}
+              whileHover={{ scale: 1.1, backgroundColor: "#1B4928", color: "#FFFFFF" }}
               whileTap={{ scale: 0.9 }}
               onClick={scrollToTop}
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white shadow-md transition-colors"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-green-primary/10 text-green-primary shadow-sm transition-colors"
               aria-label="Scroll to top"
             >
               <ArrowUp size={16} />

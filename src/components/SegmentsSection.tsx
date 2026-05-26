@@ -97,7 +97,7 @@ export default function SegmentsSection() {
             })}
           </div>
 
-          <div className="rounded-3xl bg-green-primary p-8 text-white shadow-xl md:p-12 lg:col-span-3">
+          <div className="rounded-3xl bg-white border border-green-primary/10 p-8 text-neutral-charcoal shadow-md md:p-12 lg:col-span-3">
             <AnimatePresence mode="wait">
               <motion.div
                 key={current.id}
@@ -106,14 +106,14 @@ export default function SegmentsSection() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4 }}
               >
-                <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-primary text-3xl">
+                <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-tint text-amber-deep">
                   {current.icon}
                 </div>
-                <h3 className="font-heading text-3xl font-bold md:text-4xl">{current.name}</h3>
-                <p className="mt-5 text-base leading-relaxed text-white/85 md:text-lg">
+                <h3 className="font-heading text-3xl font-bold text-green-primary md:text-4xl">{current.name}</h3>
+                <p className="mt-5 text-sm leading-relaxed text-neutral-stone md:text-base">
                   {current.desc}
                 </p>
-                <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-amber-primary/40 bg-amber-primary/15 px-4 py-2 text-xs font-semibold tracking-widest text-amber-primary uppercase">
+                <div className="mt-8 inline-flex items-center gap-2 rounded-full bg-amber-primary text-green-primary px-4 py-2 text-xs font-bold tracking-widest uppercase shadow-xs">
                   Active Vertical
                 </div>
               </motion.div>

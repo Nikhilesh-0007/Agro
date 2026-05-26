@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 import { ChevronRight, ArrowRight, Table, ShieldAlert } from "lucide-react";
 
 // Import authentic local assets
-import handPaddy from "@/assets/hand-paddy.jpg";
+import irImg from "@/assets/ir.png";
 import maizeImg from "@/assets/maize.jpg";
-import grainClose from "@/assets/grain-close.jpg";
+import brRiceImg from "@/assets/br_rice.png";
+import ddgsImg from "@/assets/DDGS.png";
 
 interface CommodityItem {
   id: string;
@@ -28,7 +29,7 @@ const commoditiesList: CommodityItem[] = [
     category: "export",
     tag: "Export Grade",
     icon: "🌾",
-    image: handPaddy,
+    image: irImg,
     desc: "Premium long grain parboiled IR64 rice. Sourced directly from Andhra Pradesh fields with high yield, highly popular across west African port markets.",
     moisture: "14% Max",
     starchOrBroken: "5% Max Brokens"
@@ -50,7 +51,7 @@ const commoditiesList: CommodityItem[] = [
     category: "industrial",
     tag: "Industrial Raw",
     icon: "🍚",
-    image: grainClose,
+    image: brRiceImg,
     desc: "Grade-A broken rice sifted during non-basmati rice milling. Delivers high sugar yields and starch percentages for ethanol plants.",
     moisture: "14% Max",
     starchOrBroken: "75% Min Starch"
@@ -87,6 +88,17 @@ const commoditiesList: CommodityItem[] = [
     desc: "Bulk broken grain and starch materials optimized for fermentation pipelines in commercial bio-ethanol fuel distilleries.",
     moisture: "14% Max",
     starchOrBroken: "72% Min Starch"
+  },
+  {
+    id: "ddgs",
+    name: "DDGS (Distillers Grains)",
+    category: "feed",
+    tag: "Animal Feed & Ethanol",
+    icon: "🌾",
+    image: ddgsImg,
+    desc: "A nutrient-rich, high-protein co-product of ethanol distillation, widely used as a cost-effective feed supplement for poultry, livestock, and aquaculture.",
+    moisture: "10% Max",
+    starchOrBroken: "26% Min Protein"
   }
 ];
 
@@ -198,22 +210,22 @@ export default function CommoditiesPage() {
           </motion.div>
 
           {/* Sourcing Guarantee Banner */}
-          <div className="mt-16 rounded-3xl bg-green-primary p-8 text-white relative overflow-hidden">
+          <div className="mt-16 rounded-3xl bg-green-tint border border-green-primary/10 p-8 text-neutral-charcoal shadow-md relative overflow-hidden">
             <div className="absolute inset-0 bg-dot-pattern opacity-10" />
             <div className="relative z-10 grid gap-8 lg:grid-cols-4 items-center">
               <div className="lg:col-span-3">
-                <span className="inline-block rounded-full bg-amber-primary/20 px-3 py-1 text-xs font-semibold tracking-wider text-amber-primary uppercase mb-3">
+                <span className="inline-block rounded-full bg-amber-tint border border-amber-primary/20 px-3 py-1 text-xs font-semibold tracking-wider text-amber-deep uppercase mb-3">
                   Sourcing Security
                 </span>
-                <h3 className="font-heading text-2xl font-bold">Uncompromising Quality Controls & Guarantee</h3>
-                <p className="mt-3 text-xs leading-relaxed text-white/80">
+                <h3 className="font-heading text-2xl font-bold text-green-primary">Uncompromising Quality Controls & Guarantee</h3>
+                <p className="mt-3 text-xs leading-relaxed text-neutral-stone">
                   Every grain parcel loaded from our warehouse undergoes double moisture calibration and automated sifting. Buyers can request full SGS or Bureau Veritas quantity and micro-biological inspections at Kakinada Port before sailings are approved.
                 </p>
               </div>
               <div className="flex justify-center lg:justify-end">
                 <Link
                   to="/contact"
-                  className="rounded-full bg-amber-primary px-6 py-3.5 text-xs font-bold text-green-primary shadow-lg hover:bg-white hover:text-green-primary transition-colors"
+                  className="rounded-full bg-green-primary px-6 py-3.5 text-xs font-bold text-white shadow-md hover:bg-amber-primary hover:text-green-primary transition-colors"
                 >
                   Contact Quality Desk
                 </Link>

@@ -79,22 +79,22 @@ export default function SegmentsPage() {
           </div>
 
           {/* Sourcing/Logistics Guarantee */}
-          <div className="mt-16 rounded-3xl bg-green-primary p-8 md:p-12 text-white relative overflow-hidden shadow-xl">
+          <div className="mt-16 rounded-3xl bg-green-tint border border-green-primary/10 p-8 md:p-12 text-neutral-charcoal shadow-md relative overflow-hidden">
             <div className="absolute inset-0 bg-dot-pattern opacity-10" />
             <div className="relative z-10 grid gap-10 lg:grid-cols-5 items-center">
               <div className="lg:col-span-3">
-                <span className="inline-block rounded-full bg-amber-primary/20 px-3 py-1 text-xs font-semibold tracking-wider text-amber-primary uppercase mb-4">
+                <span className="inline-block rounded-full bg-amber-tint border border-amber-primary/20 px-3 py-1 text-xs font-semibold tracking-wider text-amber-deep uppercase mb-4">
                   Corporate Credit
                 </span>
-                <h3 className="font-heading text-3xl font-bold">Established Trading Credit & Contracts</h3>
-                <p className="mt-4 text-xs leading-relaxed text-white/80">
+                <h3 className="font-heading text-3xl font-bold text-green-primary">Established Trading Credit & Contracts</h3>
+                <p className="mt-4 text-xs leading-relaxed text-neutral-stone">
                   Are you a high-volume buyer? We offer flexible trading contracts, including custom LC (Letter of Credit) options, bank guarantees, and credit terms for verified domestic refineries and corporate livestock integrations.
                 </p>
               </div>
               <div className="lg:col-span-2 flex justify-center lg:justify-end gap-3 flex-wrap">
                 <Link
                   to="/contact"
-                  className="rounded-full bg-amber-primary px-8 py-3.5 text-xs font-bold text-green-primary shadow-lg hover:bg-white hover:text-green-primary transition-colors"
+                  className="rounded-full bg-green-primary px-8 py-3.5 text-xs font-bold text-white shadow-md hover:bg-amber-primary hover:text-green-primary transition-colors"
                 >
                   Request Credit Line
                 </Link>
