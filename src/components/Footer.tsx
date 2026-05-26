@@ -126,13 +126,18 @@ export default function Footer() {
               Contact Desk
             </h4>
             <div className="flex flex-col gap-3.5 mt-2 text-sm text-neutral-stone">
-              <div className="flex gap-2">
-                <MapPin size={16} className="text-amber-primary shrink-0 mt-0.5" />
-                <p className="text-xs leading-relaxed">
+              <a
+                href="https://maps.app.goo.gl/1o8cH3wMgmybgzxi8?g_st=ac"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex gap-2"
+              >
+                <MapPin size={16} className="text-amber-primary shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                <p className="text-xs leading-relaxed text-neutral-stone group-hover:text-green-primary transition-colors">
                   <span className="font-semibold text-neutral-charcoal block">Corporate Office:</span>
                   KVS Towers, Rajeevi Street, Dairy Farm Centre, Kakinada, AP - 533003
                 </p>
-              </div>
+              </a>
               <div className="flex flex-col gap-2 border-t border-green-primary/10 pt-3">
                 <div className="flex items-center gap-2">
                   <User size={14} className="text-amber-primary shrink-0" />
