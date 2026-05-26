@@ -12,7 +12,7 @@ export default function ExportsPage() {
       name: "United Arab Emirates",
       port: "Jebel Ali Port (Dubai)",
       transit: "7 - 10 Days",
-      desc: "Our premium parboiled IR64 rice and millets are delivered directly to major UAE food distribution syndicates."
+      desc: "Our premium parboiled IR64 rice and agricultural commodities are delivered directly to major UAE food distribution syndicates."
     },
     {
       id: "vietnam",

@@ -20,11 +20,11 @@ const destinationData: Record<string, {
     name: "United Arab Emirates",
     flag: "🇦🇪",
     image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
-    desc: "The UAE stands as one of our most vital trading hubs in the Middle East. Through the Jebel Ali port in Dubai, we supply premium IR64 parboiled rice, graded broken rice for food production, and millets to top distributors and packaging companies.",
+    desc: "The UAE stands as one of our most vital trading hubs in the Middle East. Through the Jebel Ali port in Dubai, we supply premium IR64 parboiled rice, and graded broken rice for food production to top distributors and packaging companies.",
     port: "Jebel Ali Port (Dubai)",
     transit: "7 - 10 Days",
     freightType: "Containerized Cargo (20ft FCL)",
-    commodities: ["Parboiled IR64 Rice", "White Rice (Non-Basmati)", "Millet", "Broken Rice"],
+    commodities: ["Parboiled IR64 Rice", "White Rice (Non-Basmati)", "Broken Rice"],
     customs: [
       "Customs Declaration (Bayyan)",
       "Phytosanitary Certificate from Govt of India",

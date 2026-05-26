@@ -9,6 +9,8 @@ import irImg from "@/assets/ir.png";
 import maizeImg from "@/assets/maize.jpg";
 import brRiceImg from "@/assets/br_rice.png";
 import ddgsImg from "@/assets/DDGS.png";
+import brandPrettyMamaImg from "@/assets/brand_pretty_mama.jpg";
+import brandSafraImg from "@/assets/brand_safra.jpg";
 
 const commodityData: Record<string, {
   name: string;
@@ -77,24 +79,6 @@ const commodityData: Record<string, {
       { name: "Ethanol Raw Grains", id: "ethanol-materials", image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=600&q=80" }
     ]
   },
-  millet: {
-    name: "Millets (Pearl & Finger)",
-    titleName: "Premium Millets (Bajra & Ragi)",
-    image: "https://images.unsplash.com/photo-1596450514735-111a2fe02935?auto=format&fit=crop&w=1200&q=80",
-    desc: "Highly nutritious and drought-resistant smart grains sourced from rural co-operatives. Packed with rich proteins and essential minerals, our millets are widely exported for human consumption, specialty health foods, and birdfeed blends.",
-    specs: [
-      { parameter: "Purity", value: "99% Min" },
-      { parameter: "Moisture", value: "12% Max" },
-      { parameter: "Foreign Matter", value: "1% Max" },
-      { parameter: "Other Crop Seeds", value: "0.5% Max" },
-    ],
-    packaging: ["25 kg PP bags", "Multi-layer vacuum packs", "Bulk container loaders"],
-    destinations: ["UAE", "Saudi Arabia", "United Kingdom", "EU Markets"],
-    related: [
-      { name: "Yellow Maize", id: "maize", image: maizeImg },
-      { name: "Feed Products", id: "feed-products", image: "https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&w=600&q=80" }
-    ]
-  },
   "feed-products": {
     name: "Poultry & Cattle Feed Grains",
     titleName: "Premium Feed Grains & Ingredients",
@@ -110,7 +94,7 @@ const commodityData: Record<string, {
     destinations: ["South India Feed Plants", "East India Cattle Cooperatives", "Vietnam Feed Manufacturers"],
     related: [
       { name: "Yellow Maize", id: "maize", image: maizeImg },
-      { name: "Millets", id: "millet", image: "https://images.unsplash.com/photo-1596450514735-111a2fe02935?auto=format&fit=crop&w=600&q=80" }
+      { name: "DDGS Feed", id: "ddgs", image: ddgsImg }
     ]
   },
   "ethanol-materials": {
@@ -295,6 +279,67 @@ export default function CommodityDetailPage() {
               </div>
             </div>
           </div>
+
+          {/* Brand Bags Showcase for Rice */}
+          {id === "rice" && (
+            <div className="mt-12 rounded-3xl border border-green-tint bg-white p-8 md:p-12 shadow-sm">
+              <div className="grid gap-12 lg:grid-cols-2 items-center">
+                <div>
+                  <span className="mb-3 inline-block rounded-full bg-amber-tint border border-amber-primary/20 px-3 py-1 text-xs font-semibold tracking-wider text-amber-deep uppercase">
+                    Export Branding & Packaging
+                  </span>
+                  <h3 className="font-heading text-3xl font-bold text-green-primary md:text-4xl">
+                    Our House Brands & Custom Labeling
+                  </h3>
+                  <p className="mt-5 text-sm leading-relaxed text-neutral-stone">
+                    We supply our premium rice in recognized house brands — <strong>Pretty Mama</strong> and <strong>Safra</strong> — which have established strong market trust across key West African and Middle Eastern destination markets.
+                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-neutral-stone">
+                    Apart from our proprietary bag designs, <strong>we also export rice under Buyer's customized bag marks</strong>. We provide end-to-end support for custom printing, bag material selection (such as high-durability laminated PP, non-woven fabrics, or Jute), weight configurations (typically 50kg, 25kg, or custom configurations), and localized English/French translations.
+                  </p>
+                  <div className="mt-6 flex flex-wrap gap-6 text-sm text-green-primary font-bold">
+                    <div className="flex items-center gap-2">
+                      <span className="h-2 w-2 rounded-full bg-amber-primary" />
+                      Pretty Mama Series
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="h-2 w-2 rounded-full bg-green-primary" />
+                      Safra Premium Bags
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="h-2 w-2 rounded-full bg-amber-primary" />
+                      Buyer's Custom Marks (OEM)
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div className="overflow-hidden rounded-2xl border border-green-tint shadow-sm group">
+                    <img
+                      src={brandPrettyMamaImg}
+                      alt="Pretty Mama Brand Bags"
+                      className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-103"
+                    />
+                    <div className="p-4 bg-green-tint/10">
+                      <h4 className="font-heading text-base font-bold text-green-primary">Pretty Mama</h4>
+                      <p className="text-[11px] text-neutral-stone mt-1">Available in White Rice, 5% and 25% Broken, and Parboiled variants.</p>
+                    </div>
+                  </div>
+                  <div className="overflow-hidden rounded-2xl border border-green-tint shadow-sm group">
+                    <img
+                      src={brandSafraImg}
+                      alt="Safra Brand Bag"
+                      className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-103"
+                    />
+                    <div className="p-4 bg-green-tint/10">
+                      <h4 className="font-heading text-base font-bold text-green-primary">Safra</h4>
+                      <p className="text-[11px] text-neutral-stone mt-1">5% Broken Indian Long Grain Parboiled Rice flagship packaging.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Bottom Row: RFQ Inquiry Form */}
           <div className="mt-12 rounded-3xl bg-green-tint border border-green-primary/10 p-8 md:p-12 text-neutral-charcoal shadow-md relative overflow-hidden">

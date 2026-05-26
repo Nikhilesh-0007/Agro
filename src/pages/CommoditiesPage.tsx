@@ -9,6 +9,8 @@ import irImg from "@/assets/ir.png";
 import maizeImg from "@/assets/maize.jpg";
 import brRiceImg from "@/assets/br_rice.png";
 import ddgsImg from "@/assets/DDGS.png";
+import brandPrettyMamaImg from "@/assets/brand_pretty_mama.jpg";
+import brandSafraImg from "@/assets/brand_safra.jpg";
 
 interface CommodityItem {
   id: string;
@@ -55,17 +57,6 @@ const commoditiesList: CommodityItem[] = [
     desc: "Grade-A broken rice sifted during non-basmati rice milling. Delivers high sugar yields and starch percentages for ethanol plants.",
     moisture: "14% Max",
     starchOrBroken: "75% Min Starch"
-  },
-  {
-    id: "millet",
-    name: "Millets (Pearl & Finger)",
-    category: "export",
-    tag: "Export Grade",
-    icon: "🌾",
-    image: "https://images.unsplash.com/photo-1596450514735-111a2fe02935?auto=format&fit=crop&w=600&q=80",
-    desc: "Highly nutritious Bajra and Ragi sourced from agricultural co-ops, processed for international food grids and birdfeed supplies.",
-    moisture: "12% Max",
-    starchOrBroken: "99% Purity Min"
   },
   {
     id: "feed-products",
@@ -208,6 +199,54 @@ export default function CommoditiesPage() {
               ))}
             </AnimatePresence>
           </motion.div>
+
+          {/* Packaging & Branding Division Showcase */}
+          <div className="mt-16 rounded-3xl border border-green-tint bg-white p-8 md:p-12 shadow-sm">
+            <div className="grid gap-12 lg:grid-cols-2 items-center">
+              <div>
+                <span className="mb-3 inline-block rounded-full bg-amber-tint border border-amber-primary/20 px-3 py-1 text-xs font-semibold tracking-wider text-amber-deep uppercase">
+                  Branding & Packaging Division
+                </span>
+                <h3 className="font-heading text-3xl font-bold text-green-primary">
+                  Export Brand Bags & Custom Private Labels
+                </h3>
+                <p className="mt-5 text-sm leading-relaxed text-neutral-stone">
+                  We supply our premium agricultural rice commodities in our highly recognized house brands — <strong>Pretty Mama</strong> and <strong>Safra</strong> — both built for robust durability during oceanic transit and designed to cater directly to consumer markets in West Africa and the GCC.
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-neutral-stone">
+                  Additionally, <strong>we export rice under Buyer's customized bag marks (OEM)</strong>. We provide end-to-end packing services featuring custom artwork, client logos, and localized branding (offering English, French, and Portuguese texts) in standard 50kg, 25kg, or client-specified weight configurations.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-4 text-xs font-semibold text-green-primary">
+                  <span className="rounded-full bg-green-tint/50 border border-green-primary/10 px-4.5 py-1.5">★ Pretty Mama House Brand</span>
+                  <span className="rounded-full bg-green-tint/50 border border-green-primary/10 px-4.5 py-1.5">★ Safra Premium Brand</span>
+                  <span className="rounded-full bg-green-tint/50 border border-green-primary/10 px-4.5 py-1.5">★ Buyer's Private Labels</span>
+                </div>
+              </div>
+
+              <div className="grid gap-6 sm:grid-cols-2">
+                <div className="overflow-hidden rounded-2xl border border-green-tint shadow-md group bg-neutral-offwhite p-2">
+                  <div className="overflow-hidden rounded-xl">
+                    <img
+                      src={brandPrettyMamaImg}
+                      alt="Pretty Mama Brand Bags"
+                      className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <h4 className="mt-3 font-heading text-sm font-bold text-green-primary text-center">Pretty Mama Series</h4>
+                </div>
+                <div className="overflow-hidden rounded-2xl border border-green-tint shadow-md group bg-neutral-offwhite p-2">
+                  <div className="overflow-hidden rounded-xl">
+                    <img
+                      src={brandSafraImg}
+                      alt="Safra Long Grain Parboiled Rice Bag"
+                      className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <h4 className="mt-3 font-heading text-sm font-bold text-green-primary text-center">Safra Premium Bags</h4>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Sourcing Guarantee Banner */}
           <div className="mt-16 rounded-3xl bg-green-tint border border-green-primary/10 p-8 text-neutral-charcoal shadow-md relative overflow-hidden">

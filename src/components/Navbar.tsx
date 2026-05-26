@@ -14,7 +14,6 @@ const links = [
       { label: "Parboiled IR64 Rice", to: "/commodities/rice" },
       { label: "Yellow Maize", to: "/commodities/maize" },
       { label: "Broken Rice", to: "/commodities/broken-rice" },
-      { label: "Pearl & Finger Millets", to: "/commodities/millet" },
       { label: "Feed Grains & Products", to: "/commodities/feed-products" },
       { label: "Ethanol Raw Grains", to: "/commodities/ethanol-materials" },
       { label: "DDGS (Distillers Grains)", to: "/commodities/ddgs" }

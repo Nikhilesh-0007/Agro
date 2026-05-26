@@ -5,6 +5,8 @@ import StatsStrip from "../components/StatsStrip";
 import { motion } from "framer-motion";
 import portImg from "@/assets/port.jpg";
 import ethImg from "@/assets/eth4.png";
+import brandPrettyMamaImg from "@/assets/brand_pretty_mama.jpg";
+import brandSafraImg from "@/assets/brand_safra.jpg";
 
 export default function Home() {
   const cardStaggerContainer = {
@@ -163,6 +165,108 @@ export default function Home() {
               View Full Commodities Catalog <ChevronRight size={14} />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* 2.5 House Brands & Custom Packaging Section */}
+      <section className="bg-white py-20 px-6 md:px-12 lg:px-24">
+        <div className="mx-auto max-w-7xl grid items-center gap-12 lg:grid-cols-2">
+          {/* Brand Bags Images Grid */}
+          <div className="grid gap-6 sm:grid-cols-2 order-2 lg:order-1">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="overflow-hidden rounded-3xl border border-green-tint shadow-md group bg-neutral-offwhite p-3"
+            >
+              <div className="overflow-hidden rounded-2xl">
+                <img
+                  src={brandPrettyMamaImg}
+                  alt="Pretty Mama Brand Bags"
+                  className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-4">
+                <h4 className="font-heading text-lg font-bold text-green-primary">Pretty Mama Series</h4>
+                <p className="text-xs text-neutral-stone mt-2 leading-relaxed">
+                  Exported in Indian White Rice (5% & 25% Broken) and Parboiled variants. Highly sought-after brand across West African port cities.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="overflow-hidden rounded-3xl border border-green-tint shadow-md group bg-neutral-offwhite p-3"
+            >
+              <div className="overflow-hidden rounded-2xl">
+                <img
+                  src={brandSafraImg}
+                  alt="Safra Long Grain Parboiled Rice Bag"
+                  className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-4">
+                <h4 className="font-heading text-lg font-bold text-green-primary">Safra Premium Brand</h4>
+                <p className="text-xs text-neutral-stone mt-2 leading-relaxed">
+                  Our flagship food grade Indian Long Grain Parboiled Rice bag design, built for long-duration marine shipping transit.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Description Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col gap-5 order-1 lg:order-2"
+          >
+            <span className="mb-1 inline-block self-start rounded-full bg-amber-primary/20 px-3 py-1 text-xs font-semibold tracking-wider text-amber-deep uppercase">
+              Export Branding & OEM
+            </span>
+            <h2 className="font-heading text-3xl font-bold leading-tight text-green-primary md:text-4xl">
+              House Brands & Buyer Private Labeling
+            </h2>
+            <p className="text-base leading-relaxed text-neutral-stone">
+              We ship our high-grade rice in proprietary house brands — <strong>Pretty Mama</strong> and <strong>Safra</strong> — both designed to cater directly to global markets with bilingual labeling, certified weights, and moisture-controlled packaging.
+            </p>
+            <p className="text-sm leading-relaxed text-neutral-stone">
+              In addition to our own registered bag brands, <strong>we also specialize in exporting rice in Buyer bag marks</strong>. Our design and print team works directly with client specifications to package commodities with custom artwork, logos, and regional branding (in English, French, and Portuguese) in standard 50kg, 25kg, or custom configurations.
+            </p>
+            
+            <div className="mt-2 grid gap-3 sm:grid-cols-2">
+              <div className="flex items-center gap-2">
+                <div className="h-2 w-2 rounded-full bg-amber-primary" />
+                <span className="text-xs font-bold text-green-primary">Laminated PP & Jute Sacks</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="h-2 w-2 rounded-full bg-green-primary" />
+                <span className="text-xs font-bold text-green-primary">Bilingual English/French Specs</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="h-2 w-2 rounded-full bg-green-primary" />
+                <span className="text-xs font-bold text-green-primary">Custom OEM Client Printing</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="h-2 w-2 rounded-full bg-amber-primary" />
+                <span className="text-xs font-bold text-green-primary">50kg / 25kg / Custom Weights</span>
+              </div>
+            </div>
+
+            <div className="mt-4">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 rounded-full bg-green-primary px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-amber-primary hover:text-green-primary transition-colors"
+              >
+                Discuss Packaging Requirements
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 

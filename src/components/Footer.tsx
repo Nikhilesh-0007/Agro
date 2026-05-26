@@ -21,7 +21,6 @@ export default function Footer() {
     { label: "Parboiled Rice", to: "/commodities/rice" },
     { label: "Yellow Maize", to: "/commodities/maize" },
     { label: "Broken Rice", to: "/commodities/broken-rice" },
-    { label: "Pearl Millets", to: "/commodities/millet" },
     { label: "Feed Grains", to: "/commodities/feed-products" },
     { label: "Ethanol Raw Grains", to: "/commodities/ethanol-materials" },
     { label: "DDGS (Distillers Grains)", to: "/commodities/ddgs" },
