@@ -33,13 +33,12 @@ export default function AboutPage() {
               <div className="relative group max-w-sm overflow-hidden rounded-3xl shadow-lg border border-green-tint/40">
                 <img
                   src={founderImg}
-                  alt="Mr. Seshu Pampana (Mr. ASHWIN)"
+                  alt="Mr. Seshu Pampana"
                   className="aspect-[3/4] w-full object-cover transition-transform duration-500 group-hover:scale-103"
                 />
                 <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-green-primary/90 backdrop-blur-md px-5 py-3 shadow-xl text-center border border-white/10">
                   <p className="font-heading text-base font-bold text-white">Mr. Seshu Pampana</p>
-                  <p className="text-[10px] font-semibold tracking-widest text-amber-primary uppercase mt-0.5">(Mr. ASHWIN)</p>
-                  <p className="text-[10px] font-semibold text-white/80 mt-1">Founder & Managing Director</p>
+                  <p className="text-[10px] font-semibold text-white/80 mt-1">FOUNDER, GROUP CEO & MD</p>
                 </div>
               </div>
             </div>
@@ -51,7 +50,7 @@ export default function AboutPage() {
               
               <div className="flex flex-col gap-5 text-sm leading-relaxed text-neutral-stone">
                 <p>
-                  Mr. Seshu Pampana ( Mr.ASHWIN ) is a visionary agribusiness leader whose life and career are deeply rooted in a multigenerational farming legacy. By uniting this rich agricultural heritage with extensive expertise in global trade, he established A S Agro Exports, a company renowned for its sustainable supply chains and world-class commodity exports.
+                  Mr. Seshu Pampana is a visionary agribusiness leader whose life and career are deeply rooted in a multigenerational farming legacy. By uniting this rich agricultural heritage with extensive expertise in global trade, he established A S Agro Exports, a company renowned for its sustainable supply chains and world-class commodity exports.
                 </p>
                 <p>
                   Recognizing the critical global shift toward renewable energy, Mr. Pampana has strategically expanded the company’s horizons, specializing in the vital supply of rice and agricultural residues to state-of-the-art ethanol plants. His dynamic leadership seamlessly unites traditional farming roots with modern green energy initiatives, creating a bridge from local growers to international industrial markets.
