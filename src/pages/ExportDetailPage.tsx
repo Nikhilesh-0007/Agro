@@ -31,10 +31,10 @@ const destinationData: Record<string, {
       "Certificate of Origin (APEDA certified)",
       "Strict labeling detailing net weight, origin, and pack date in Arabic/English"
     ],
-    certifications: ["ISO 9001:2015", "APEDA Registration", "HACCP Food Safety Certificate"],
+    certifications: ["APEDA Registration", "HACCP Food Safety Certificate"],
     routes: [
-      { from: "Visakhapatnam Port (VZG)", to: "Jebel Ali Port (DXB)", stopovers: "Direct Line" },
-      { from: "Kakinada Deep Water Port (COPT)", to: "Jebel Ali Port (DXB)", stopovers: "Colombo port transshipment" }
+      { from: "All Indian Ports", to: "Jebel Ali Port (DXB)", stopovers: "Direct Line" },
+      { from: "All Indian Ports", to: "Jebel Ali Port (DXB)", stopovers: "Colombo port transshipment" }
     ]
   },
   vietnam: {
@@ -54,8 +54,8 @@ const destinationData: Record<string, {
     ],
     certifications: ["APEDA Export Clearance", "Fumigation Endorsement", "SGS Quantity & Quality Certificate"],
     routes: [
-      { from: "Kakinada Port (COPT)", to: "Ho Chi Minh Port (SGN)", stopovers: "Direct Bulk Line" },
-      { from: "Visakhapatnam Port (VZG)", to: "Haiphong Port (HPH)", stopovers: "Singapore Port Transshipment" }
+      { from: "All Indian Ports", to: "Ho Chi Minh / Haiphong Ports", stopovers: "Direct Line" },
+      { from: "All Indian Ports", to: "Ho Chi Minh / Haiphong Ports", stopovers: "Colombo port transshipment" }
     ]
   },
   africa: {
@@ -63,7 +63,7 @@ const destinationData: Record<string, {
     flag: "🌍",
     image: "https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?auto=format&fit=crop&w=1200&q=80",
     desc: "Africa is the main global destination for our parboiled IR64 rice. Operating on a large bulk-handling capacity, we dispatch dedicated container vessels to premier west African hubs, establishing solid security for local food grains supply lines.",
-    port: "Cotonou (Benin), Lome (Togo), Abidjan (Ivory Coast), Conakry (Guinea)",
+    port: "Cotonou (Benin), Lome (Togo), Abidjan (Ivory Coast), Conakry (Guinea), Freetown (Sierra Leone), Dakar (Senegal), Banjul (Gambia), Luanda (Angola)",
     transit: "25 - 32 Days",
     freightType: "Break-bulk charter vessels & 20ft FCL Containers",
     commodities: ["Parboiled IR64 Rice (5% & 25% broken)", "White Rice (Non-Basmati)", "Yellow Maize"],
@@ -75,9 +75,29 @@ const destinationData: Record<string, {
     ],
     certifications: ["APEDA Registered Export", "SGS Grade-A Seal", "Phytosanitary Clearance Certificate"],
     routes: [
-      { from: "Kakinada Anchorage Port (COPT)", to: "Port of Cotonou (Benin)", stopovers: "Direct Break-bulk Route" },
-      { from: "Visakhapatnam Port (VZG)", to: "Port of Lome (Togo)", stopovers: "Direct Container Line" },
-      { from: "Kakinada Deep Water Port (COPT)", to: "Port of Abidjan (Ivory Coast)", stopovers: "Direct Container Line" }
+      { from: "All Indian Ports", to: "West & East African Ports", stopovers: "Direct Line" },
+      { from: "All Indian Ports", to: "West & East African Ports", stopovers: "Colombo port transshipment" }
+    ]
+  },
+  uk: {
+    name: "United Kingdom",
+    flag: "🇬🇧",
+    image: "https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?auto=format&fit=crop&w=1200&q=80",
+    desc: "The United Kingdom represents our premier European destination. We supply premium non-basmati rice varieties and feed ingredients to major wholesale distributors and food processing sectors across Great Britain, ensuring compliance with strict European food standards.",
+    port: "Port of Felixstowe / Port of London",
+    transit: "20 - 24 Days",
+    freightType: "Containerized Cargo (20ft FCL)",
+    commodities: ["Parboiled IR64 Rice", "White Rice (Non-Basmati)", "Broken Rice"],
+    customs: [
+      "Customs Import Declaration (C88)",
+      "Accredited Phytosanitary Certificate from Govt of India",
+      "SGS Grade & Quality Certification",
+      "Bilingual English labeling detailing net weight, origin, and importer details"
+    ],
+    certifications: ["APEDA Registration", "HACCP Food Safety Certificate", "SGS Quality Assurance"],
+    routes: [
+      { from: "All Indian Ports", to: "Port of Felixstowe / London", stopovers: "Direct Line" },
+      { from: "All Indian Ports", to: "Port of Felixstowe / London", stopovers: "Colombo port transshipment" }
     ]
   }
 };
@@ -132,7 +152,7 @@ export default function ExportDetailPage() {
               <div className="rounded-3xl border border-green-tint bg-white p-6 md:p-8">
                 <h3 className="font-heading text-2xl font-bold text-green-primary mb-4">Export Overview</h3>
                 <p className="text-base leading-relaxed text-neutral-stone">{dest.desc}</p>
-                
+
                 <div className="mt-8">
                   <h4 className="font-heading text-lg font-bold text-green-primary mb-4">Primary Export Commodities</h4>
                   <div className="flex flex-wrap gap-2">
@@ -150,7 +170,7 @@ export default function ExportDetailPage() {
             <div className="flex flex-col gap-6">
               <div className="rounded-3xl border border-green-tint bg-white p-6 md:p-8 shadow-sm">
                 <h3 className="font-heading text-2xl font-bold text-green-primary mb-6">Logistics & Transit Profile</h3>
-                
+
                 <div className="grid gap-4 sm:grid-cols-2 mb-6">
                   <div className="rounded-2xl bg-neutral-offwhite p-4 border border-green-tint/30">
                     <p className="text-xs font-bold text-neutral-stone uppercase tracking-wide">Destination Ports</p>

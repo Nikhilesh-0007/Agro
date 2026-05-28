@@ -29,6 +29,14 @@ export default function ExportsPage() {
       port: "Cotonou, Lome, Abidjan",
       transit: "25 - 32 Days",
       desc: "Dedicated break-bulk vessel dispatches feeding major markets across West and East Africa."
+    },
+    {
+      id: "uk",
+      flag: "🇬🇧",
+      name: "United Kingdom",
+      port: "Felixstowe / London",
+      transit: "20 - 24 Days",
+      desc: "Premium grade rice shipments and food raw materials shipped directly to British wholesale distribution partners."
     }
   ];
 
@@ -50,7 +58,7 @@ export default function ExportsPage() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {regions.map((r) => (
               <motion.div
                 key={r.id}

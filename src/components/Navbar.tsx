@@ -27,6 +27,7 @@ const links = [
     dropdown: [
       { label: "United Arab Emirates", to: "/export-countries/uae" },
       { label: "Vietnam", to: "/export-countries/vietnam" },
+      { label: "United Kingdom", to: "/export-countries/uk" },
       { label: "African Continent", to: "/export-countries/africa" }
     ]
   },

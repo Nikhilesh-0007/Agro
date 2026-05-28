@@ -51,7 +51,7 @@ export default function EthanolClients() {
           </p>
           <h2 className="font-heading text-4xl font-bold text-green-primary md:text-5xl">Ethanol Plant Clients</h2>
           <p className="mt-4 text-sm leading-relaxed text-neutral-stone md:text-base">
-            Supplying grains to leading ethanol producers across Andhra Pradesh and Odisha.
+            Here are a few of our clients.
           </p>
         </div>
 

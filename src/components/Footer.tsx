@@ -29,6 +29,7 @@ export default function Footer() {
   const network = [
     { label: "United Arab Emirates", to: "/export-countries/uae" },
     { label: "Vietnam Network", to: "/export-countries/vietnam" },
+    { label: "United Kingdom Network", to: "/export-countries/uk" },
     { label: "African Continent", to: "/export-countries/africa" },
     { label: "Full Shipping Ports", to: "/export-countries" },
   ];

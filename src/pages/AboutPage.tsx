@@ -9,7 +9,6 @@ import founderImg from "@/assets/image.png";
 export default function AboutPage() {
   const certs = [
     { title: "APEDA Registration", agency: "Ministry of Commerce, India", code: "Agricultural Products Export Authority" },
-    { title: "ISO 9001:2015", agency: "Accredited Quality Standard", code: "Quality Management Certified" },
     { title: "Phytosanitary Clearance", agency: "Ministry of Agriculture", code: "Accredited Pest & Bio Clearance" },
     { title: "Fumigation Endorsement", agency: "Govt Authorized Agencies", code: "Customs Clearance Approved" }
   ];
@@ -55,10 +54,10 @@ export default function AboutPage() {
                   Mr. Seshu Pampana (Mr. Ashwin) is a visionary agribusiness leader whose life and career are deeply rooted in a multigenerational farming legacy. By uniting this rich agricultural heritage with extensive expertise in global trade, he established A S Agro Exports, a company renowned for its sustainable supply chains and world-class commodity exports.
                 </p>
                 <p>
-                  Recognizing the critical global shift toward renewable energy, Mr. Pampana has strategically expanded the company’s horizons, specializing in the vital supply of rice and agricultural residues to state-of-the-art ethanol plants. His dynamic leadership seamlessly unites traditional farming roots with modern green energy initiatives, creating a bridge from local growers to international industrial markets.
+                  Recognizing the critical global shift toward renewable energy, Mr. Seshu Pampana has strategically expanded the company’s horizons, specializing in the vital supply of rice and agricultural residues to state-of-the-art ethanol plants. His dynamic leadership seamlessly unites traditional farming roots with modern green energy initiatives, creating a bridge from local growers to international industrial markets.
                 </p>
                 <p>
-                  Driven by an enduring family legacy of integrity and innovation, Mr. Pampana ensures that A S Agro Exports is not just participating in global trade—it is actively pioneering eco-friendly solutions for a sustainable tomorrow.
+                  Driven by an enduring family legacy of integrity and innovation, Mr. Seshu Pampana ensures that A S Agro Exports is not just participating in global trade—it is actively pioneering eco-friendly solutions for a sustainable tomorrow.
                 </p>
               </div>
 
@@ -195,7 +194,7 @@ export default function AboutPage() {
             <h2 className="font-heading text-3xl font-bold text-green-primary md:text-4xl">Verified Trade Certifications</h2>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
             {certs.map((c, idx) => (
               <div key={idx} className="rounded-2xl border border-green-tint bg-white p-6 shadow-sm flex flex-col items-center text-center">
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-tint text-green-primary">
