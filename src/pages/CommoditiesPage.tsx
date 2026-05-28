@@ -6,7 +6,7 @@ import { ChevronRight, ArrowRight, Table, ShieldAlert } from "lucide-react";
 
 // Import authentic local assets
 import irImg from "@/assets/ir.png";
-import maizeImg from "@/assets/image copy 3.png";
+import maizeImg from "@/assets/maize2.jpeg";
 import brRiceImg from "@/assets/br_rice.png";
 import ddgsImg from "@/assets/DDGS.png";
 import brandPrettyMamaImg from "@/assets/brand_pretty_mama.jpg";

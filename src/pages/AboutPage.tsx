@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import handImg from "@/assets/hand-paddy.jpg";
 import maizeImg from "@/assets/maize.jpg";
 import founderImg from "@/assets/image.png";
+import infraImg from "@/assets/image copy 4.png";
 
 export default function AboutPage() {
   const certs = [
@@ -174,7 +175,7 @@ export default function AboutPage() {
 
             <div className="overflow-hidden rounded-3xl shadow-md border border-green-tint">
               <img
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
+                src={infraImg}
                 alt="Modern logistics warehouse facility"
                 className="aspect-[4/3] w-full object-cover"
               />
