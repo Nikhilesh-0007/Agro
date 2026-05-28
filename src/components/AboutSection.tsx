@@ -50,7 +50,7 @@ export default function AboutSection() {
           <div className="mt-8 border-l-2 border-amber-primary pl-4">
             <p className="text-sm text-neutral-stone">Contact Person</p>
             <p className="font-heading text-lg font-semibold text-neutral-charcoal">
-              Mr. Seshu Pampana
+              Mr. Seshu Pampana (Mr. Ashwin)
             </p>
             <a
               href="mailto:asagroexportsltd@gmail.com"

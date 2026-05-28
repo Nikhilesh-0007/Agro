@@ -15,7 +15,7 @@ const segments = [
     icon: <FlaskConical size={22} className="text-green-primary" />,
     name: "DDGS",
     accent: "green",
-    desc: "Distillers Dried Grains with Solubles — a high-protein co-product of ethanol production that we channel into the feed industry as a cost-effective nutritional ingredient.",
+    desc: "Distillers Dried Grains with Solubles — a high-protein co-product of grain distillation that we channel into the feed industry as a cost-effective nutritional ingredient.",
   },
   {
     id: "feed",

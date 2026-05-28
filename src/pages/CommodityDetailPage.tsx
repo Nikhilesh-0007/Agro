@@ -11,6 +11,7 @@ import brRiceImg from "@/assets/br_rice.png";
 import ddgsImg from "@/assets/DDGS.png";
 import brandPrettyMamaImg from "@/assets/brand_pretty_mama.jpg";
 import brandSafraImg from "@/assets/brand_safra.jpg";
+import ethanolImg from "@/assets/image copy.png";
 
 const commodityData: Record<string, {
   name: string;
@@ -57,14 +58,14 @@ const commodityData: Record<string, {
     destinations: ["Ethanol Plants (A.P., Odisha)", "Poultry Feed Mills (Domestic)", "Vietnam", "Malaysia"],
     related: [
       { name: "Feed Products", id: "feed-products", image: "https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&w=600&q=80" },
-      { name: "Ethanol Raw Grains", id: "ethanol-materials", image: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=600&q=80" }
+      { name: "Ethanol Raw Grains", id: "ethanol-materials", image: ethanolImg }
     ]
   },
   "broken-rice": {
-    name: "Broken Rice (Grade A)",
+    name: "Broken Rice",
     titleName: "Graded Broken Rice (High-Starch Industrial)",
     image: brRiceImg,
-    desc: "Grade-A broken rice filtered during the milling process of premium non-basmati varieties. Highly rich in starch, it serves as the ultimate raw material for alcohol distilleries, ethanol fermentation, and animal feed preparation.",
+    desc: "Premium broken rice filtered during the milling process of premium non-basmati varieties. Highly rich in starch, it serves as the ultimate raw material for alcohol distilleries, ethanol fermentation, and animal feed preparation.",
     specs: [
       { parameter: "Broken Ratio", value: "100% Broken" },
       { parameter: "Moisture", value: "14% Max" },
@@ -76,7 +77,7 @@ const commodityData: Record<string, {
     destinations: ["A.P. Ethanol Distilleries", "Odisha Fermentation Plants", "Vietnam", "West Africa"],
     related: [
       { name: "Parboiled IR64", id: "rice", image: irImg },
-      { name: "Ethanol Raw Grains", id: "ethanol-materials", image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=600&q=80" }
+      { name: "Ethanol Raw Grains", id: "ethanol-materials", image: ethanolImg }
     ]
   },
   "feed-products": {
@@ -100,7 +101,7 @@ const commodityData: Record<string, {
   "ethanol-materials": {
     name: "Ethanol Raw Grains",
     titleName: "Ethanol Raw Grains (Distillery Fermentation Grade)",
-    image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=1200&q=80",
+    image: ethanolImg,
     desc: "Specialized high-starch grains calibrated for bio-ethanol distillation. Undergoes strict testing to maximize fermentable sugar output, providing bio-fuel and ethanol refineries with standard grain volumes at highly competitive operational rates.",
     specs: [
       { parameter: "Starch Content", value: "72% Min" },
@@ -119,7 +120,7 @@ const commodityData: Record<string, {
     name: "DDGS (Distillers Grains)",
     titleName: "DDGS - Distillers Dried Grains with Solubles (Premium Feed Grade)",
     image: ddgsImg,
-    desc: "A nutrient-rich, high-protein co-product of ethanol distillation, widely used as a cost-effective feed supplement for poultry, livestock, and aquaculture.",
+    desc: "A nutrient-rich, high-protein co-product of grain distillation, widely used as a cost-effective feed supplement for poultry, livestock, and aquaculture.",
     specs: [
       { parameter: "Crude Protein", value: "26% - 28% Min" },
       { parameter: "Moisture", value: "10% Max" },
@@ -318,24 +319,24 @@ export default function CommodityDetailPage() {
                 </div>
 
                 <div className="grid gap-6 sm:grid-cols-2">
-                  <div className="overflow-hidden rounded-2xl border border-green-tint shadow-sm group">
+                  <div className="overflow-hidden rounded-2xl border border-green-tint shadow-sm group bg-white">
                     <img
                       src={brandPrettyMamaImg}
                       alt="Pretty Mama Brand Bags"
-                      className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-103"
+                      className="aspect-[3/4] w-full object-contain transition-transform duration-500 group-hover:scale-103"
                     />
-                    <div className="p-4 bg-green-tint/10">
+                    <div className="p-4 bg-green-tint/10 border-t border-green-tint/50">
                       <h4 className="font-heading text-base font-bold text-green-primary">Pretty Mama</h4>
                       <p className="text-[11px] text-neutral-stone mt-1">Available in White Rice, 5% and 25% Broken, and Parboiled variants.</p>
                     </div>
                   </div>
-                  <div className="overflow-hidden rounded-2xl border border-green-tint shadow-sm group">
+                  <div className="overflow-hidden rounded-2xl border border-green-tint shadow-sm group bg-white">
                     <img
                       src={brandSafraImg}
                       alt="Safra Brand Bag"
-                      className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-103"
+                      className="aspect-[3/4] w-full object-contain transition-transform duration-500 group-hover:scale-103"
                     />
-                    <div className="p-4 bg-green-tint/10">
+                    <div className="p-4 bg-green-tint/10 border-t border-green-tint/50">
                       <h4 className="font-heading text-base font-bold text-green-primary">Safra</h4>
                       <p className="text-[11px] text-neutral-stone mt-1">5% Broken Indian Long Grain Parboiled Rice flagship packaging.</p>
                     </div>

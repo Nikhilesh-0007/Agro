@@ -125,7 +125,7 @@ export default function Home() {
               {
                 id: "broken-rice",
                 icon: "🍚",
-                name: "Broken Rice (Grade A)",
+                name: "Broken Rice",
                 desc: "Graded broken rice rich in starch, delivering high fermentation efficiency for alcohol distilleries.",
                 tag: "Distillery Raw"
               }
@@ -180,11 +180,11 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="overflow-hidden rounded-3xl border border-green-tint shadow-md group bg-neutral-offwhite p-3"
             >
-              <div className="overflow-hidden rounded-2xl">
+              <div className="overflow-hidden rounded-2xl bg-white flex items-center justify-center">
                 <img
                   src={brandPrettyMamaImg}
                   alt="Pretty Mama Brand Bags"
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="aspect-[3/4] w-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-4">
@@ -202,11 +202,11 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="overflow-hidden rounded-3xl border border-green-tint shadow-md group bg-neutral-offwhite p-3"
             >
-              <div className="overflow-hidden rounded-2xl">
+              <div className="overflow-hidden rounded-2xl bg-white flex items-center justify-center">
                 <img
                   src={brandSafraImg}
                   alt="Safra Long Grain Parboiled Rice Bag"
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="aspect-[3/4] w-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-4">

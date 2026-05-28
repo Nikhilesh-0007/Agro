@@ -11,6 +11,7 @@ import brRiceImg from "@/assets/br_rice.png";
 import ddgsImg from "@/assets/DDGS.png";
 import brandPrettyMamaImg from "@/assets/brand_pretty_mama.jpg";
 import brandSafraImg from "@/assets/brand_safra.jpg";
+import ethanolImg from "@/assets/image copy.png";
 
 interface CommodityItem {
   id: string;
@@ -49,12 +50,12 @@ const commoditiesList: CommodityItem[] = [
   },
   {
     id: "broken-rice",
-    name: "Broken Rice (Grade A)",
+    name: "Broken Rice",
     category: "industrial",
     tag: "Industrial Raw",
     icon: "🍚",
     image: brRiceImg,
-    desc: "Grade-A broken rice sifted during non-basmati rice milling. Delivers high sugar yields and starch percentages for ethanol plants.",
+    desc: "Premium broken rice sifted during non-basmati rice milling. Delivers high sugar yields and starch percentages for ethanol plants.",
     moisture: "14% Max",
     starchOrBroken: "75% Min Starch"
   },
@@ -75,7 +76,7 @@ const commoditiesList: CommodityItem[] = [
     category: "industrial",
     tag: "Distillery Raw",
     icon: "⚗️",
-    image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=600&q=80",
+    image: ethanolImg,
     desc: "Bulk broken grain and starch materials optimized for fermentation pipelines in commercial bio-ethanol fuel distilleries.",
     moisture: "14% Max",
     starchOrBroken: "72% Min Starch"
@@ -84,10 +85,10 @@ const commoditiesList: CommodityItem[] = [
     id: "ddgs",
     name: "DDGS (Distillers Grains)",
     category: "feed",
-    tag: "Animal Feed & Ethanol",
+    tag: "Animal Feed",
     icon: "🌾",
     image: ddgsImg,
-    desc: "A nutrient-rich, high-protein co-product of ethanol distillation, widely used as a cost-effective feed supplement for poultry, livestock, and aquaculture.",
+    desc: "A nutrient-rich, high-protein co-product of grain distillation, widely used as a cost-effective feed supplement for poultry, livestock, and aquaculture.",
     moisture: "10% Max",
     starchOrBroken: "26% Min Protein"
   }
@@ -224,22 +225,22 @@ export default function CommoditiesPage() {
               </div>
 
               <div className="grid gap-6 sm:grid-cols-2">
-                <div className="overflow-hidden rounded-2xl border border-green-tint shadow-md group bg-neutral-offwhite p-2">
-                  <div className="overflow-hidden rounded-xl">
+                <div className="overflow-hidden rounded-2xl border border-green-tint shadow-md group bg-neutral-offwhite p-3">
+                  <div className="overflow-hidden rounded-xl bg-white flex items-center justify-center">
                     <img
                       src={brandPrettyMamaImg}
                       alt="Pretty Mama Brand Bags"
-                      className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="aspect-[3/4] w-full object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <h4 className="mt-3 font-heading text-sm font-bold text-green-primary text-center">Pretty Mama Series</h4>
                 </div>
-                <div className="overflow-hidden rounded-2xl border border-green-tint shadow-md group bg-neutral-offwhite p-2">
-                  <div className="overflow-hidden rounded-xl">
+                <div className="overflow-hidden rounded-2xl border border-green-tint shadow-md group bg-neutral-offwhite p-3">
+                  <div className="overflow-hidden rounded-xl bg-white flex items-center justify-center">
                     <img
                       src={brandSafraImg}
                       alt="Safra Long Grain Parboiled Rice Bag"
-                      className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="aspect-[3/4] w-full object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <h4 className="mt-3 font-heading text-sm font-bold text-green-primary text-center">Safra Premium Bags</h4>

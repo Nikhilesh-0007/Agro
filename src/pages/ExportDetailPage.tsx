@@ -45,7 +45,7 @@ const destinationData: Record<string, {
     port: "Ho Chi Minh Port / Haiphong Port",
     transit: "12 - 15 Days",
     freightType: "Bulk Vessel & Containerized Cargo",
-    commodities: ["Broken Rice (Grade A)", "Yellow Maize (Animal Feed Grade)", "Ethanol Raw Grains"],
+    commodities: ["Broken Rice", "Yellow Maize (Animal Feed Grade)", "Ethanol Raw Grains"],
     customs: [
       "Vietnam Customs Import Declaration Form",
       "Fumigation Certification from accredited Indian agencies",

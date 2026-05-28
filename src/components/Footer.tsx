@@ -141,7 +141,7 @@ export default function Footer() {
               <div className="flex flex-col gap-2 border-t border-green-primary/10 pt-3">
                 <div className="flex items-center gap-2">
                   <User size={14} className="text-amber-primary shrink-0" />
-                  <span className="text-xs font-semibold text-neutral-charcoal">Mr. Seshu Pampana</span>
+                  <span className="text-xs font-semibold text-neutral-charcoal">Mr. Seshu Pampana (Mr. Ashwin)</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Phone size={14} className="text-amber-primary shrink-0 mt-0.5" />

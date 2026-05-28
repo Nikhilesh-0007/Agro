@@ -92,7 +92,10 @@ export default function ContactSection() {
               </motion.div>
               <motion.div variants={staggerItem}>
                 <ContactRow icon={<User size={18} />} label="Contact Person">
-                  Mr. Seshu Pampana
+                  <div className="flex flex-col">
+                    <span className="font-semibold text-neutral-charcoal">Mr. Seshu Pampana (Mr. Ashwin)</span>
+                    <span className="text-xs text-neutral-stone mt-0.5">Founder, Group CEO & MD</span>
+                  </div>
                 </ContactRow>
               </motion.div>
             </motion.div>
