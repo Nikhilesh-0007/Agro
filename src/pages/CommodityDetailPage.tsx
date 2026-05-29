@@ -11,7 +11,7 @@ import brRiceImg from "@/assets/br_rice.png";
 import ddgsImg from "@/assets/DDGS.png";
 import brandPrettyMamaImg from "@/assets/brand_pretty_mama.jpg";
 import brandSafraImg from "@/assets/brand_safra.jpg";
-import ethanolImg from "@/assets/image copy 5.png";
+import ethanolImg from "@/assets/image copy 6.png";
 
 const commodityData: Record<string, {
   name: string;
