@@ -79,7 +79,7 @@ export default function ContactSection() {
                 <ContactRow icon={<Mail size={18} />} label="Email">
                   <a
                     href="mailto:asagroexportsltd@gmail.com"
-                    className="hover:text-amber-deep"
+                    className="hover:text-amber-deep whitespace-nowrap"
                   >
                     asagroexportsltd@gmail.com
                   </a>

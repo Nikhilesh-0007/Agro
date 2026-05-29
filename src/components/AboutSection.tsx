@@ -54,7 +54,7 @@ export default function AboutSection() {
             </p>
             <a
               href="mailto:asagroexportsltd@gmail.com"
-              className="text-sm text-green-mid hover:text-green-primary"
+              className="text-sm text-green-mid hover:text-green-primary whitespace-nowrap"
             >
               asagroexportsltd@gmail.com
             </a>

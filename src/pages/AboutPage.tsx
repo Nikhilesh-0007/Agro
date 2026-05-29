@@ -67,7 +67,7 @@ export default function AboutPage() {
                   <p className="text-xs text-neutral-stone">Direct Contact</p>
                   <a
                     href="mailto:asagroexportsltd@gmail.com"
-                    className="text-sm font-semibold text-green-mid hover:text-green-primary transition-colors"
+                    className="text-sm font-semibold text-green-mid hover:text-green-primary transition-colors whitespace-nowrap"
                   >
                     asagroexportsltd@gmail.com
                   </a>
