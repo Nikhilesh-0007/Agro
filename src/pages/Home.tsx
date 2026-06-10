@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import StatsStrip from "../components/StatsStrip";
 import { motion } from "framer-motion";
 import portImg from "@/assets/port.jpg";
-import ethImg from "@/assets/eth4.png";
+import sourcingApImg from "@/assets/sourcing_ap.jpeg";
 import brandPrettyMamaImg from "@/assets/brand_pretty_mama.jpg";
 import brandSafraImg from "@/assets/brand_safra.jpg";
 
@@ -74,9 +74,9 @@ export default function Home() {
           >
             <div className="overflow-hidden rounded-3xl shadow-lg border border-green-tint">
               <img
-                src={ethImg}
+                src={sourcingApImg}
                 alt="AS Agro Exports Corporate Heritage"
-                className="aspect-[4/3] w-full object-cover scale-[1.05] origin-bottom transition-transform duration-500 hover:scale-[1.08]"
+                className="aspect-square w-full object-cover transition-transform duration-500 hover:scale-[1.03]"
               />
             </div>
             <div className="absolute -bottom-4 -left-4 rounded-2xl bg-amber-primary px-5 py-3 shadow-xl border border-amber-deep/10">
