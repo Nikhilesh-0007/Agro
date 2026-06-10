@@ -173,7 +173,17 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-stone">
-          <p>© {new Date().getFullYear()} AS Agro Exports. All Rights Reserved. Built for global agricultural trade excellence.</p>
+          <p>
+            © {new Date().getFullYear()} AS Agro Exports. All Rights Reserved. Built for global agricultural trade excellence · Developed by{" "}
+            <a
+              href="https://www.instagram.com/staffarc?igsh=NGI1ajBjank5aWF3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold hover:text-green-primary transition-colors duration-200"
+            >
+              StaffArc
+            </a>
+          </p>
           <div className="flex items-center gap-4">
             <Link to="/about" className="hover:text-neutral-charcoal transition-colors">Privacy Policy</Link>
             <Link to="/contact" className="hover:text-neutral-charcoal transition-colors">Terms of Service</Link>
